@@ -1,0 +1,19 @@
+{
+  "fecha": "2026-11-23T04:03:56.317Z",
+  "alertas": [],
+  "avisos": [],
+  "resumen": {
+    "fuente": "https://unicom-api.unicom-puno.workers.dev",
+    "renglones": 6,
+    "actas": 1,
+    "raices": 3,
+    "raiz_tablero_recalculada": "100b87e176a0c5dc9a665996b085e93c5ec3d8833d514766da06bf04418f0b65",
+    "totales": {
+      "P01": 120,
+      "P02": 80,
+      "blancos": 6,
+      "nulos": 4,
+      "impugnados": 1
+    }
+  }
+}
