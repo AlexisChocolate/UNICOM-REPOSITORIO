@@ -3,3 +3,9 @@ __pycache__/
 .venv/
 *.jsonl
 .DS_Store
+node_modules/
+.wrangler/
+.dev.vars
+.env
+.env.*
+.claude/settings.local.json
