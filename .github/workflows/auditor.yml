@@ -1,0 +1,51 @@
+name: auditor
+
+# Auditor continuo (Paso 9). Ojo: este auditor es nuestro, no independiente (arquitectura, sec. 5.5);
+# los independientes son los que corren partidos o universidades en sus computadoras con el mismo código.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: escribe-en-el-repositorio
+  cancel-in-progress: false
+
+jobs:
+  auditar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Revisar las 7 condiciones
+        id: revision
+        run: |
+          set +e
+          node auditor/correr-auditor.js --nombre "auditor de GitHub Actions (UNICOM)"
+          echo "codigo=$?" >> "$GITHUB_OUTPUT"
+      - name: Verificar los anclajes en Bitcoin
+        run: node auditor/verificar-anclajes.js --carpeta raices
+      - name: Guardar estado, última vista y copias de árboles anclados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add auditor/estado auditor/publicado auditor/arboles
+          if ! git diff --cached --quiet; then
+            git commit -m "Auditor: estado y última raíz vista"
+            git pull --rebase
+            git push
+          fi
+      - name: Fallar si hubo inconsistencias
+        if: steps.revision.outputs.codigo != '0'
+        run: |
+          cat auditor/publicado/informe.json
+          exit 1

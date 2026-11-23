@@ -25,14 +25,13 @@ async function prepararEscenario() {
   const servidor = await nuevaLlave();
   const ventanilla = new Ventanilla({
     almacen,
-    llavePrivada: servidor.privada,
-    llavePublica: servidor.publica,
+    llaves: [{ llavePrivada: servidor.privada, llavePublica: servidor.publica }],
     reloj: () => new Date("2026-11-27T21:30:00.000Z"),
   });
   const rosa = await nuevaLlave();
   const personeroSol = await nuevaLlave();
-  await ventanilla.registrarEnPadron({ rol: "miembro", mesa: "045123", llave_publica: rosa.publica });
-  await ventanilla.registrarEnPadron({ rol: "personero", partido: "P01", llave_publica: personeroSol.publica });
+  await ventanilla.registrarEnPadron({ rol: "miembro", mesa: "045123", llave_publica: rosa.publica }, { comoAdministrador: true });
+  await ventanilla.registrarEnPadron({ rol: "personero", partido: "P01", llave_publica: personeroSol.publica }, { comoAdministrador: true });
   return { almacen, ventanilla, servidor, rosa, personeroSol };
 }
 
@@ -127,7 +126,7 @@ test("un firmante que no está en el padrón se rechaza", async () => {
 test("un miembro de otra mesa no puede firmar el acta 045123", async () => {
   const { ventanilla } = await prepararEscenario();
   const miembroDeOtraMesa = await nuevaLlave();
-  await ventanilla.registrarEnPadron({ rol: "miembro", mesa: "045124", llave_publica: miembroDeOtraMesa.publica });
+  await ventanilla.registrarEnPadron({ rol: "miembro", mesa: "045124", llave_publica: miembroDeOtraMesa.publica }, { comoAdministrador: true });
   const cuerpo = await firmar(await paqueteDeJuliaca(), { rol: "miembro", llave: miembroDeOtraMesa });
   await assert.rejects(ventanilla.recibirActa(cuerpo), (error) => error.codigo === "firmante_no_registrado");
 });
@@ -178,7 +177,7 @@ test("diez actas que llegan a la vez quedan en un solo cuaderno, sin ramas", asy
   for (let numero = 0; numero < 10; numero++) {
     const mesa = String(45200 + numero).padStart(6, "0");
     const miembro = await nuevaLlave();
-    await ventanilla.registrarEnPadron({ rol: "miembro", mesa, llave_publica: miembro.publica });
+    await ventanilla.registrarEnPadron({ rol: "miembro", mesa, llave_publica: miembro.publica }, { comoAdministrador: true });
     const votos = { P01: 100 + numero, P02: 90, blancos: 3, nulos: 2, impugnados: 0 };
     envios.push(firmar(await paqueteDeJuliaca({ mesa, votos }), { rol: "miembro", llave: miembro }));
   }
@@ -214,7 +213,7 @@ test("publicar raíces crea la génesis y una cadena que se verifica con la llav
 test("el padrón no acepta la misma llave dos veces", async () => {
   const { ventanilla, rosa } = await prepararEscenario();
   await assert.rejects(
-    ventanilla.registrarEnPadron({ rol: "miembro", mesa: "045123", llave_publica: rosa.publica }),
+    ventanilla.registrarEnPadron({ rol: "miembro", mesa: "045123", llave_publica: rosa.publica }, { comoAdministrador: true }),
     (error) => error.codigo === "llave_ya_registrada",
   );
 });

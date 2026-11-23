@@ -18,4 +18,13 @@ new_sqlite_classes = ["VentanillaUnica"]
 [[d1_databases]]
 binding = "BASE"
 database_name = "unicom"
-database_id = "PEGAR_AQUI_EL_ID_DE_D1"
+database_id = "87d3855c-c9d9-4c6c-abad-cd7fb38cef0f"
+
+# Fotos (nombradas por su huella) y volcados para los auditores.
+[[r2_buckets]]
+binding = "ARCHIVOS"
+bucket_name = "unicom-archivos"
+
+# Publica una raíz cada 10 minutos, solo si el cuaderno creció (Paso 9).
+[triggers]
+crons = ["*/10 * * * *"]

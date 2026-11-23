@@ -1,0 +1,38 @@
+name: copiar-fotos
+
+# Copia pública de las fotos del piloto (arquitectura, sec. 8). El nombre de cada archivo es su huella.
+on:
+  schedule:
+    - cron: "29 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: escribe-en-el-repositorio
+  cancel-in-progress: false
+
+jobs:
+  copiar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: node auditor/copiar-fotos.js --carpeta fotos
+      - name: Guardar en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fotos
+          if git diff --cached --quiet; then
+            echo "No hay fotos nuevas."
+            exit 0
+          fi
+          git commit -m "Copia pública de fotos nuevas"
+          git pull --rebase
+          git push

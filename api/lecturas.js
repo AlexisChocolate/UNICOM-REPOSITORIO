@@ -38,7 +38,11 @@ export async function pruebaDeMesa(almacen, mesa) {
   const hoja = nodos[0];
   const hermanos = await completarHermanos(nodos.slice(1, NIVELES + 1), CATEGORIAS.length);
   const raiz = nodos[NIVELES + 1];
-  const [renglon] = await almacen.leerRenglones(acta.renglon, 1);
+  const [[renglon], opiniones, lecturasIa] = await Promise.all([
+    almacen.leerRenglones(acta.renglon, 1),
+    almacen.leerOpiniones(mesa),
+    almacen.leerLecturas(mesa),
+  ]);
   return {
     mesa,
     casillero,
@@ -49,6 +53,8 @@ export async function pruebaDeMesa(almacen, mesa) {
     sumas: hoja.sumas,
     hermanos,
     raiz,
+    opiniones,
+    lecturas_ia: lecturasIa,
   };
 }
 
