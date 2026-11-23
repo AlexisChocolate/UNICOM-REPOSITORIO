@@ -1,0 +1,23 @@
+{
+  "name": "unicom",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "UNICOM: sistema criptográfico a prueba de fraude electoral (núcleo, API y auditor)",
+  "scripts": {
+    "test": "node --test --test-reporter=spec \"nucleo/pruebas/*.test.js\" \"api/pruebas/*.test.js\" \"auditor/pruebas/*.test.js\"",
+    "dev": "wrangler dev",
+    "desplegar": "wrangler deploy",
+    "plan-b": "wrangler dev --local --persist-to .plan-b --port 8787",
+    "auditor": "node auditor/correr-auditor.js",
+    "simular-ataque": "node auditor/simular-ataque.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.12.0",
+    "@noble/curves": "2.4.0",
+    "opentimestamps": "0.4.9"
+  },
+  "devDependencies": {
+    "wrangler": "4.166.0"
+  }
+}

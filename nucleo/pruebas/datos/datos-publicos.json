@@ -1,0 +1,18 @@
+{
+  "nota": "Descargados el 22/11/2026 de blockstream.info (API Esplora, igual a la de mempool.space) y de api.drand.sh (red quicknet).",
+  "bloque_870000": {
+    "altura": 870000,
+    "hash": "0000000000000000000152dd9d6059126e4e4dbc2732246bef2b8496ef1d971d",
+    "encabezado": "00a03d29cc75988098fafae62060cfa7993d2139fbca1bbb67c001000000000000000000491fdec619a67b72c6cf5545e97e7d55596d7baf94a4cd336229c4b6d2d5d1ea625e3367e4c4021778595fa1"
+  },
+  "bloque_genesis": {
+    "altura": 0,
+    "hash": "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
+    "encabezado": "0100000000000000000000000000000000000000000000000000000000000000000000003ba3edfd7a7b12b27ac72c3e67768f617fc81bc3888a51323a9fb8aa4b1e5e4a29ab5f49ffff001d1dac2b7c"
+  },
+  "drand_quicknet_1000": {
+    "round": 1000,
+    "randomness": "fe290beca10872ef2fb164d2aa4442de4566183ec51c56ff3cd603d930e54fdd",
+    "signature": "b44679b9a59af2ec876b1a6b1ad52ea9b1615fc3982b19576350f93447cb1125e342b73a8dd2bacbe47e4b6b63ed5e39"
+  }
+}

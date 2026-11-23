@@ -1,0 +1,3034 @@
+{
+  "categorias": [
+    "P01",
+    "P02",
+    "blancos",
+    "nulos",
+    "impugnados"
+  ],
+  "niveles": 17,
+  "vacios": [
+    {
+      "huella": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "5b559d6e309cfe5c1da19ac1242c0122a7f7caa7b90a18897095a8404ec85fe4",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "3847f941ebf819807924071bf5f9eb5b37b8c76bf8168cb58857a5dfb98f10c3",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "99368f3ceef398209f5a98511a2ee52c4e4626ec1ac2748d695787a888a6648d",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "225a60fe5f4520be05f665183bc9a8890711d834591563a9fffd6ebf12fba9bd",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "374e8fc4e5f14dbbb0bb8f3c4506702736d3377a407a5da472cceba14b76fc74",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "8a7d5a9555b4397c8091c76503dbb67d510a780e7d726701f1e982bb8f1b7a0e",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "8e8511854370b6ba1e8b3beec1b70c14be8f89eb0f6bcdb5f1a7a56c490dee77",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "601a338583dc3524f7720b88160b28bcc9d58c872ea813bb0bce4ff563db36db",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "e0dd1b1ee752f6071d2ef8dd03a2dffa0d92469e7bddde16b0f0bb017dd30e5b",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "adaacdefcfcd22349f014cb6cbb7142255b518cc4da63eb696ffcfa35bacc28a",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "2b7baf52c8cbd0b65f552fd81d2597df30a3d11be5cde64579b5fe526ac87b60",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "4d8d4a00127901c53de0bed404948dac7fc4bc6c4832f17e4cdcd7c160c7adf5",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "fc96bc0c4798b184a5208d7bc87d0e1a1c83527bfa56395f917f782433ff4dd3",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "4e744a98ed22017a45b86e86f9f2ad6899e46073c522181d0f8be547dcb33fd6",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "104b6ea1b45ce0272c4fef41cefc11989d4b253a9824a3fa6e87bf2a200cd3cf",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "f5b04ab6c09b20e706a64a7b83dda20dfd09fd710cd0b96e3b2364e8baac575f",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "huella": "e9f54678226cadd616257118646a56448618b819b486f7f94fb15ec354978dff",
+      "sumas": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "vectores": [
+    {
+      "nombre": "tablero vacío",
+      "hojas": [],
+      "raiz": {
+        "huella": "e9f54678226cadd616257118646a56448618b819b486f7f94fb15ec354978dff",
+        "sumas": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "prueba": null
+    },
+    {
+      "nombre": "tres mesas de Juliaca",
+      "hojas": [
+        {
+          "casillero": 45120,
+          "huella_acta": "88a9cc0805bf39d9f3418f1efb72b7055b59285871b04684a571368bf39024e2",
+          "sumas": [
+            98,
+            110,
+            5,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 45123,
+          "huella_acta": "2e4ded0a1df72c846d24c297e25d744abf647166915fa2f999c9327e554159fb",
+          "sumas": [
+            120,
+            80,
+            6,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 45124,
+          "huella_acta": "4e43517c0e5b108b940ccef02f57736b2ac8de91b3f7d87c58e435b522f3cac1",
+          "sumas": [
+            77,
+            131,
+            2,
+            6,
+            0
+          ]
+        }
+      ],
+      "raiz": {
+        "huella": "e3bd1efb137b86ecacc4dc2a651363ab4524fdcaf72afe2eb97b50aa7d3f04a0",
+        "sumas": [
+          295,
+          321,
+          13,
+          13,
+          1
+        ]
+      },
+      "prueba": {
+        "casillero": 45120,
+        "hermanos": [
+          {
+            "huella": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "55e85c9eab394972b6c2d877b99be45b986f775e9f10308b8c351b853fb16758",
+            "sumas": [
+              120,
+              80,
+              6,
+              4,
+              1
+            ]
+          },
+          {
+            "huella": "6a84dfbd762750916e15daab6d8e06bf5b4779656287e0c63ede9e5a956da1da",
+            "sumas": [
+              77,
+              131,
+              2,
+              6,
+              0
+            ]
+          },
+          {
+            "huella": "99368f3ceef398209f5a98511a2ee52c4e4626ec1ac2748d695787a888a6648d",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "225a60fe5f4520be05f665183bc9a8890711d834591563a9fffd6ebf12fba9bd",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "374e8fc4e5f14dbbb0bb8f3c4506702736d3377a407a5da472cceba14b76fc74",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "8a7d5a9555b4397c8091c76503dbb67d510a780e7d726701f1e982bb8f1b7a0e",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "8e8511854370b6ba1e8b3beec1b70c14be8f89eb0f6bcdb5f1a7a56c490dee77",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "601a338583dc3524f7720b88160b28bcc9d58c872ea813bb0bce4ff563db36db",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "e0dd1b1ee752f6071d2ef8dd03a2dffa0d92469e7bddde16b0f0bb017dd30e5b",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "adaacdefcfcd22349f014cb6cbb7142255b518cc4da63eb696ffcfa35bacc28a",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "2b7baf52c8cbd0b65f552fd81d2597df30a3d11be5cde64579b5fe526ac87b60",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "4d8d4a00127901c53de0bed404948dac7fc4bc6c4832f17e4cdcd7c160c7adf5",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "fc96bc0c4798b184a5208d7bc87d0e1a1c83527bfa56395f917f782433ff4dd3",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "4e744a98ed22017a45b86e86f9f2ad6899e46073c522181d0f8be547dcb33fd6",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "104b6ea1b45ce0272c4fef41cefc11989d4b253a9824a3fa6e87bf2a200cd3cf",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "f5b04ab6c09b20e706a64a7b83dda20dfd09fd710cd0b96e3b2364e8baac575f",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "nombre": "casilleros extremos y suma máxima",
+      "hojas": [
+        {
+          "casillero": 0,
+          "huella_acta": "d2d2358d318ad564b26aff855142b7a99db10358276b63e7236a26e2ad02fee5",
+          "sumas": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 131071,
+          "huella_acta": "41d270467668e976c832da04910f347207a186b5b3556258b743f861a9e86ad7",
+          "sumas": [
+            9007199254740991,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "raiz": {
+        "huella": "60f2a44e154ebfb6e8dbcfc0d10ad478dd9b921dbea8a48c5feea7b4d3d9f770",
+        "sumas": [
+          9007199254740991,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "prueba": {
+        "casillero": 0,
+        "hermanos": [
+          {
+            "huella": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "5b559d6e309cfe5c1da19ac1242c0122a7f7caa7b90a18897095a8404ec85fe4",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "3847f941ebf819807924071bf5f9eb5b37b8c76bf8168cb58857a5dfb98f10c3",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "99368f3ceef398209f5a98511a2ee52c4e4626ec1ac2748d695787a888a6648d",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "225a60fe5f4520be05f665183bc9a8890711d834591563a9fffd6ebf12fba9bd",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "374e8fc4e5f14dbbb0bb8f3c4506702736d3377a407a5da472cceba14b76fc74",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "8a7d5a9555b4397c8091c76503dbb67d510a780e7d726701f1e982bb8f1b7a0e",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "8e8511854370b6ba1e8b3beec1b70c14be8f89eb0f6bcdb5f1a7a56c490dee77",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "601a338583dc3524f7720b88160b28bcc9d58c872ea813bb0bce4ff563db36db",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "e0dd1b1ee752f6071d2ef8dd03a2dffa0d92469e7bddde16b0f0bb017dd30e5b",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "adaacdefcfcd22349f014cb6cbb7142255b518cc4da63eb696ffcfa35bacc28a",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "2b7baf52c8cbd0b65f552fd81d2597df30a3d11be5cde64579b5fe526ac87b60",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "4d8d4a00127901c53de0bed404948dac7fc4bc6c4832f17e4cdcd7c160c7adf5",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "fc96bc0c4798b184a5208d7bc87d0e1a1c83527bfa56395f917f782433ff4dd3",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "4e744a98ed22017a45b86e86f9f2ad6899e46073c522181d0f8be547dcb33fd6",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "104b6ea1b45ce0272c4fef41cefc11989d4b253a9824a3fa6e87bf2a200cd3cf",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "92233de5d4ad1666bdac05d11331929828de8b488f3641f1222103017d1713e8",
+            "sumas": [
+              9007199254740991,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "nombre": "200 mesas de Puno",
+      "hojas": [
+        {
+          "casillero": 40000,
+          "huella_acta": "7deedb107cd1de4fce9feb911d47d4c473d0b18b1453ac8968f427d6e1f851e4",
+          "sumas": [
+            0,
+            200,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 40037,
+          "huella_acta": "7cd24183cd66af06d58a9ccd24936d75cd843106f022f34370b2f43f4e8be04f",
+          "sumas": [
+            1,
+            199,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 40074,
+          "huella_acta": "52352754de37b72bca184953979af3b63a521e0ecee8c158cf0f23009a0d642c",
+          "sumas": [
+            2,
+            198,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 40111,
+          "huella_acta": "10c802a39e34874a2328e37d30b402c43ebca7a8b84916087dba51aa7fbd4340",
+          "sumas": [
+            3,
+            197,
+            3,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 40148,
+          "huella_acta": "37a28e840221277d2d8bf5c59ecde6ba6d72a916c3ad35d376fb52866b33adea",
+          "sumas": [
+            4,
+            196,
+            4,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 40185,
+          "huella_acta": "f134cce1b875bbc42e0cb79ad424a033eafad0075004dd5d9a61359a930b8df2",
+          "sumas": [
+            5,
+            195,
+            5,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 40222,
+          "huella_acta": "438d7dc290645cc8c6b82927110ad60128c7600245ce12265e2a277291ea6d02",
+          "sumas": [
+            6,
+            194,
+            6,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 40259,
+          "huella_acta": "fae5f4bf724e249f7ef464a8deb8a0fe403b8a5fc99f14e76d3a4fbc91bc4c37",
+          "sumas": [
+            7,
+            193,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 40296,
+          "huella_acta": "ab3c10648ae9f31b60826ac25023e72d7197d80d0af13a64cca788ee67b56ddf",
+          "sumas": [
+            8,
+            192,
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 40333,
+          "huella_acta": "0f5d91c654f5d1d9f950bbf42ff40a6ad64900db9b539812333499a099d0953b",
+          "sumas": [
+            9,
+            191,
+            2,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 40370,
+          "huella_acta": "a8054ec49c009991ef2765ce9de06655bfb80fd302906ae8b3dd1ba77e6dac49",
+          "sumas": [
+            10,
+            190,
+            3,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 40407,
+          "huella_acta": "2871011e1d55c8b880620ca12da2b9dd0748ebbb339e8860ae51092ceff4eba9",
+          "sumas": [
+            11,
+            189,
+            4,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 40444,
+          "huella_acta": "8852b246067f65ce8c97166507134325b228a2ee3903a7897f37c6e9f462c330",
+          "sumas": [
+            12,
+            188,
+            5,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 40481,
+          "huella_acta": "a2d5bf7052bc273d1bfbe5b344a0330f106d31e922060c7db5a49f1e54c77c81",
+          "sumas": [
+            13,
+            187,
+            6,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 40518,
+          "huella_acta": "05834286c8b53c1f2523411e6ce0dbb1462716c0f777f96a37f3184bb0e17808",
+          "sumas": [
+            14,
+            186,
+            0,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 40555,
+          "huella_acta": "9bd871ba797cb442b5d40084a1f795c2cec38253b225c3704e801641458d8432",
+          "sumas": [
+            15,
+            185,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 40592,
+          "huella_acta": "587a01046bb22fad361e3d859a4c7c86de34494c7408abb1405600767c283fd8",
+          "sumas": [
+            16,
+            184,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 40629,
+          "huella_acta": "b2c10798ca8c81fe5af6d98d72e366e76fc40cf6c7914c2fd728828d22a7e03a",
+          "sumas": [
+            17,
+            183,
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 40666,
+          "huella_acta": "57b6da217e3ae6c62c604ed6d16be883c63b1dee35cb2af1b908177b6a7747cb",
+          "sumas": [
+            18,
+            182,
+            4,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 40703,
+          "huella_acta": "c78ddb0fa1f7df4acc57ad93616e8e933cbf8adf2c61ab798aa46085d5925176",
+          "sumas": [
+            19,
+            181,
+            5,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 40740,
+          "huella_acta": "5b534b3aefe3c92ee07913ed240e32866cd7502bc2c6e33cb07a7bc388dbec42",
+          "sumas": [
+            20,
+            180,
+            6,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 40777,
+          "huella_acta": "396b07d7d22fb17a1cfb0315b26b215d08ce5f04969f9379291d802e4b060154",
+          "sumas": [
+            21,
+            179,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 40814,
+          "huella_acta": "6849027d78e351829bed287532ed6b4ee326ada3e87dbdfb05fa19ca9bacca2e",
+          "sumas": [
+            22,
+            178,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 40851,
+          "huella_acta": "2dc591a161e1e5ac1ac3f1ef316965a0291a3c4919dab9588e9e680156f68d14",
+          "sumas": [
+            23,
+            177,
+            2,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 40888,
+          "huella_acta": "acfb865f45a4bca6dff7a112ab593188f5a2b0a57903c03f424eb4ffca5be7df",
+          "sumas": [
+            24,
+            176,
+            3,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 40925,
+          "huella_acta": "0c1696cea072fe76c559208ec65fd2b1c2c0d42e5bf445cd33e9c00b69df8c86",
+          "sumas": [
+            25,
+            175,
+            4,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 40962,
+          "huella_acta": "69e8621b718edf964f7eb38410b74f48e2f00dad30679b13a8d8771879cf0d1b",
+          "sumas": [
+            26,
+            174,
+            5,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 40999,
+          "huella_acta": "e47049718a24238f01fafca1a8481ab99eed9af686b9c7c8e311d001eeefdb11",
+          "sumas": [
+            27,
+            173,
+            6,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 41036,
+          "huella_acta": "e2cc554b272a803293b359e15699b0801eb6e06fab56b62736c810a224dd1f7e",
+          "sumas": [
+            28,
+            172,
+            0,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 41073,
+          "huella_acta": "b07a92e441c31d59259d9656d623a3194aa9f39cffef1e84dbf3d4a728cb95df",
+          "sumas": [
+            29,
+            171,
+            1,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 41110,
+          "huella_acta": "e9c7fd9bca8aeca8f8ce4b88028031024d1d9a468a27d5cdc291964ecf521442",
+          "sumas": [
+            30,
+            170,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 41147,
+          "huella_acta": "aacf50e8e2ecb5de785bbdfda83e62475300c029bb1b28b9e815697f82efc78e",
+          "sumas": [
+            31,
+            169,
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 41184,
+          "huella_acta": "1f5ea4c853855a0e4a5e61868bfd14748e502c4ccbefe6b831c90f6d453db545",
+          "sumas": [
+            32,
+            168,
+            4,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 41221,
+          "huella_acta": "9f6cacb4603b2459ca56fb99825610777e4d11edea960f63b2f637fcba170e2a",
+          "sumas": [
+            33,
+            167,
+            5,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 41258,
+          "huella_acta": "fccfbdf4cb3742895ccd8cbe3fa3a4e849b2e205775f62e9b4adbad96fbf6134",
+          "sumas": [
+            34,
+            166,
+            6,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 41295,
+          "huella_acta": "263289f28792a2a0693029e3bd74a712a5364e6e46e8c953b24b10b9bad06c3a",
+          "sumas": [
+            35,
+            165,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 41332,
+          "huella_acta": "dfc99dd8e46f8fae1b42f4cf59e08979a1f47f241727b8c7c10c17f4d4c4c3e4",
+          "sumas": [
+            36,
+            164,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 41369,
+          "huella_acta": "aeef851688579a3ba0c67fff36df203217f0750367ef8eb10620228a765bc9ef",
+          "sumas": [
+            37,
+            163,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 41406,
+          "huella_acta": "17e7cb4d69d9f9b56cebd81755333e62f0df4795fc5a870e6fa81c2870cba56b",
+          "sumas": [
+            38,
+            162,
+            3,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 41443,
+          "huella_acta": "278d7b3e6a1721d15351591cae60dee694670385ee132dd8c4e747722464be56",
+          "sumas": [
+            39,
+            161,
+            4,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 41480,
+          "huella_acta": "4d24ba95bff7610a0449abb02d07e0c71b7c0b947986bce45119135c1e69e0f9",
+          "sumas": [
+            40,
+            160,
+            5,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 41517,
+          "huella_acta": "3a40aaf530c17ed806d1227b7ada3a57d152c2e5e0dc97588e5b4de35da0ae58",
+          "sumas": [
+            41,
+            159,
+            6,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 41554,
+          "huella_acta": "e7bd475dd0c6a7ce7a56a1c20099c7c8ce4777fea6dbffec25ec24a308957024",
+          "sumas": [
+            42,
+            158,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 41591,
+          "huella_acta": "7cccb19bcd7038a5e8bdd21cc8e37441a8f0ddc8e1aa5d793bc7b9e15524a148",
+          "sumas": [
+            43,
+            157,
+            1,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 41628,
+          "huella_acta": "5ea653169506f38276d8e2c8c74f5de694cf192e9d0d176626faa5d185bf0ce5",
+          "sumas": [
+            44,
+            156,
+            2,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 41665,
+          "huella_acta": "f5db3292987669ed6cab42fabce71d9792750c760acb16e7ef907f12df59b0d7",
+          "sumas": [
+            45,
+            155,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 41702,
+          "huella_acta": "6e240319a9b58e13dba297fc6b46e29ac61b10a5a15993dc9a5de26a99d858c2",
+          "sumas": [
+            46,
+            154,
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 41739,
+          "huella_acta": "36da51e4dd8fe032c2446a4fea86fc4edda5bcaaffd713f70ba96af9b5f1ae31",
+          "sumas": [
+            47,
+            153,
+            5,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 41776,
+          "huella_acta": "66fba1bf5f6abeb82f552e3884c3bd61e55230d08415d36a2a70e7ee7d772a63",
+          "sumas": [
+            48,
+            152,
+            6,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 41813,
+          "huella_acta": "75604077cbe633409f6cbaeb03f947d2f5625b68d58ecbf1a111f512ae95eb3c",
+          "sumas": [
+            49,
+            151,
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 41850,
+          "huella_acta": "d7703f3c04181a04e64a0f90ad0fecc556ee0a4c70b95d2fde811d6f61c71388",
+          "sumas": [
+            50,
+            150,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 41887,
+          "huella_acta": "7b4cda6c91f77b6b8c353455bd055e0f35ec70dbc226d358b2e600c670c9566f",
+          "sumas": [
+            51,
+            149,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 41924,
+          "huella_acta": "957590106267a6c83c6d57d6dc596a5ed54ebd3e0fb947e8180d4fcbbf6c8d36",
+          "sumas": [
+            52,
+            148,
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 41961,
+          "huella_acta": "a88b9887ca176f18e8e5420c5590129a54340083aebe5aec6101dc92d83761a7",
+          "sumas": [
+            53,
+            147,
+            4,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 41998,
+          "huella_acta": "d23ddf03747847a42a2a4aa79698894a2b32832708c076e198c878841f2e7e85",
+          "sumas": [
+            54,
+            146,
+            5,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 42035,
+          "huella_acta": "b80c4003d935e6656b76f8fa5d839a863816ed5b5562d354c628e6a2ca19cf84",
+          "sumas": [
+            55,
+            145,
+            6,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 42072,
+          "huella_acta": "e582b1a3ef39d4d06ee5a502d6297e78b0a8bd2f1c798386b694fc52dce98c0d",
+          "sumas": [
+            56,
+            144,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 42109,
+          "huella_acta": "cbfcfca2452eb8af0dc9ad1da616218024be97fd6026dc202f289a6e420a0ffe",
+          "sumas": [
+            57,
+            143,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 42146,
+          "huella_acta": "a54d2e4bdc020d374fc715ed663d09448df5523814da9f59ffa236307eb15f19",
+          "sumas": [
+            58,
+            142,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 42183,
+          "huella_acta": "d370f6d5c684e4efacaae8284fe37f8323f923384a134592c210e5e14c36be7a",
+          "sumas": [
+            59,
+            141,
+            3,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 42220,
+          "huella_acta": "7bad90c6eff65f7f9ee5d0e557757432d2acd2e433fba68061c05c06630a5122",
+          "sumas": [
+            60,
+            140,
+            4,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 42257,
+          "huella_acta": "e05a1358cb64422dfc3b864c65ccd373f00fda39419e5f30b7c555d4ba13d3a3",
+          "sumas": [
+            61,
+            139,
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 42294,
+          "huella_acta": "c0f9b718945cbd88bcacc7bd521617bb0c05f36371dc4370f73aa50466734aae",
+          "sumas": [
+            62,
+            138,
+            6,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 42331,
+          "huella_acta": "536457f26252562ddffd4f755116ab3b913e2d96b2921bbb701ee993282d70fb",
+          "sumas": [
+            63,
+            137,
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 42368,
+          "huella_acta": "d451d2e6dd45678c1ed473abd0a7647bab8903ed4f7ba35478b59da327928d79",
+          "sumas": [
+            64,
+            136,
+            1,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 42405,
+          "huella_acta": "635834e318ef2c5c9342e0865ee68e29018e883a7b7f82ca6508da5a84d7d599",
+          "sumas": [
+            65,
+            135,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 42442,
+          "huella_acta": "f9559a3d5440c2691afb8130a61d17caa1c3dba7d46c161afa7cbc4d66728907",
+          "sumas": [
+            66,
+            134,
+            3,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 42479,
+          "huella_acta": "bfb5a744809ba1edf9314a5f73f394401a77477d6fd66430aecfd10aae2cb6b1",
+          "sumas": [
+            67,
+            133,
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 42516,
+          "huella_acta": "90c2bbb94356d316cde2f9e6a8990d89c51c6496dbf7a9304ca1ed811da0bc23",
+          "sumas": [
+            68,
+            132,
+            5,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 42553,
+          "huella_acta": "fed97f8cc068656f347c5a26309700996e5c23f2bf06742ac17db8ecc37e27aa",
+          "sumas": [
+            69,
+            131,
+            6,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 42590,
+          "huella_acta": "be5eca2cc539fd26ce127d08d9b384898238a7f389d9b33b67891c68ceae2037",
+          "sumas": [
+            70,
+            130,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 42627,
+          "huella_acta": "47409e2ae6c40fd321b57022eb88a08a4833dc885b78ef48c4e9e7c7cf973ffb",
+          "sumas": [
+            71,
+            129,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 42664,
+          "huella_acta": "6af7290a59f73a2e3eee73a11ad6e29a6cb00c5f99c86c43159b0423dee314c6",
+          "sumas": [
+            72,
+            128,
+            2,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 42701,
+          "huella_acta": "710bc01daf8bb09b26efa8051e87abdeb786c24b1e7c23466e1601ca3142e90a",
+          "sumas": [
+            73,
+            127,
+            3,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 42738,
+          "huella_acta": "f9b37a3b5cddd76b4652b2f1cf67446ea1b67955eb2a84b0f017a8ad5efdff56",
+          "sumas": [
+            74,
+            126,
+            4,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 42775,
+          "huella_acta": "e0acf1082be19f32c83cef5d167920ac2fb1373fa254cd7b43b6a1d91c4d65f7",
+          "sumas": [
+            75,
+            125,
+            5,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 42812,
+          "huella_acta": "00dc6beb10957f95342bc45f86af9c132c390dd1a4d3fc32e9daa23ebac432fa",
+          "sumas": [
+            76,
+            124,
+            6,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 42849,
+          "huella_acta": "a27eaa506776dcfb1cea52fccf5021d589037513a6d2b1099291d57cd120f8e3",
+          "sumas": [
+            77,
+            123,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 42886,
+          "huella_acta": "9618a1a6b606278aa15d04be03f01421e67458813a06a01e2e8f1908deda3d6e",
+          "sumas": [
+            78,
+            122,
+            1,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 42923,
+          "huella_acta": "87957ab5856f893e15cdb51ff920a2207d2082052fa53a3f80af62a672c975e0",
+          "sumas": [
+            79,
+            121,
+            2,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 42960,
+          "huella_acta": "92975d544cba556d5e98c30cc8eb82c0f062a25e6065298718a2a10bcf367908",
+          "sumas": [
+            80,
+            120,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 42997,
+          "huella_acta": "7566847c48888f319f8aa3645daee9e3712de94629f7b4a8f1f46bef01d34518",
+          "sumas": [
+            81,
+            119,
+            4,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 43034,
+          "huella_acta": "ce84e28d04da3a3c718e94d10501455dd205cd6608447139eeceba7751009ba5",
+          "sumas": [
+            82,
+            118,
+            5,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 43071,
+          "huella_acta": "09b47ce2ab9108fe26f4e11471df7c223283fae67aca7143dbda66ee1d400a31",
+          "sumas": [
+            83,
+            117,
+            6,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 43108,
+          "huella_acta": "2840c45cd29aa192e90928edce29aea5928284a1614c93edec3b7bbd7f875fa5",
+          "sumas": [
+            84,
+            116,
+            0,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 43145,
+          "huella_acta": "2aeb3c03dafde8a1567eb0df7e19848611279733f24289d0f6f7a2e6499a3404",
+          "sumas": [
+            85,
+            115,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 43182,
+          "huella_acta": "c901f597c9efedd2e5c228ec375dc45bc56e4d9e154db5ec9b17bb89056f5a3b",
+          "sumas": [
+            86,
+            114,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 43219,
+          "huella_acta": "c7be28d6ee08ac9757bc5831bd2b8753a9f782b637768160c448df089012c9a2",
+          "sumas": [
+            87,
+            113,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 43256,
+          "huella_acta": "086f0f4d4aa055b3963d8c75c214a13c5f7c49dfa3adc094b169fe8e19f0ab25",
+          "sumas": [
+            88,
+            112,
+            4,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 43293,
+          "huella_acta": "e1ccaaf01106ba99a816d0af94d99d21c0b9facac98654882e03317d19a38743",
+          "sumas": [
+            89,
+            111,
+            5,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 43330,
+          "huella_acta": "d452e4e4ad7c75d0e954194e5e9adf911755fd8609743c30b1e67cd61ffffc32",
+          "sumas": [
+            90,
+            110,
+            6,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 43367,
+          "huella_acta": "5af9277d5c8c893ac70c786d3e950e0a39756d065266629e646f4210b4184dcb",
+          "sumas": [
+            91,
+            109,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 43404,
+          "huella_acta": "352cecaac3fe93aa3b909de57bd8f2e936f0e6c426f99178bd8d3a1865526de8",
+          "sumas": [
+            92,
+            108,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 43441,
+          "huella_acta": "295a0f4f8951a599b5b1fc532e8f8ab49a6688fd01f7359faa615be1a1ac0d8e",
+          "sumas": [
+            93,
+            107,
+            2,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 43478,
+          "huella_acta": "b7f8876c8d5517726fcb8deede3a23e27b531183463dbfa6bdf73de542d94fae",
+          "sumas": [
+            94,
+            106,
+            3,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 43515,
+          "huella_acta": "b0eb03a7ab12ba7bd7a80f496fcaa2a2c27cca097d940c932e25af2db8ecf624",
+          "sumas": [
+            95,
+            105,
+            4,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 43552,
+          "huella_acta": "3c2fc59321fd0c198564cd40111eb3778f085ac92291b963e1fa2b2526e3dbc0",
+          "sumas": [
+            96,
+            104,
+            5,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 43589,
+          "huella_acta": "524984887e9a0247e5e2b2ccdff03e2b66560e5773556342514c8bae1ee6f4c0",
+          "sumas": [
+            97,
+            103,
+            6,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 43626,
+          "huella_acta": "0c3f238dfab56798c3277f7b6d15bbc4912997771f7b9ba526c8536307e57560",
+          "sumas": [
+            98,
+            102,
+            0,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 43663,
+          "huella_acta": "dd2af95e641e584231db8d3223716fa9ed378932fbb4e1c3611f336538284fc2",
+          "sumas": [
+            99,
+            101,
+            1,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 43700,
+          "huella_acta": "23bf6f73847987c2ecf707d71971c4e1396044919e00c4e08bcb2ea1e09d84b0",
+          "sumas": [
+            100,
+            100,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 43737,
+          "huella_acta": "c13a3e37bcfe2d87ad67d4a19d81e33f09385168415a8fdb25c1bb2d83f08b89",
+          "sumas": [
+            101,
+            99,
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 43774,
+          "huella_acta": "2617fc221e12263057fa450f5a26f07686f2cc11ead176fc711fb859a410b679",
+          "sumas": [
+            102,
+            98,
+            4,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 43811,
+          "huella_acta": "b30f844a73248b4a08d69db14026d519368562aa24a2c7598ee52e35e2131bd5",
+          "sumas": [
+            103,
+            97,
+            5,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 43848,
+          "huella_acta": "0a6a80e8117dbae6a760e8223afde11c8ed44ac3e4c5824d1bfe90f9f30db3ac",
+          "sumas": [
+            104,
+            96,
+            6,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 43885,
+          "huella_acta": "1c0e272b971dd8e7a2ebb79559ba15793453fd07d0bef86e3e427604faf65e36",
+          "sumas": [
+            105,
+            95,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 43922,
+          "huella_acta": "59d4cc6a771dc45428174a5522adf1b3b12f9351a8a8085bc9b730f6226672df",
+          "sumas": [
+            106,
+            94,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 43959,
+          "huella_acta": "6add6b70b26060c03acae27e01f7be1c89eefe3672e7bf9d7641ee0ae280c52f",
+          "sumas": [
+            107,
+            93,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 43996,
+          "huella_acta": "b9be82934a0c99fb9efa2c140da87dee977972a1167c70409bc45897d6323299",
+          "sumas": [
+            108,
+            92,
+            3,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 44033,
+          "huella_acta": "5e1816d5e74bbff7a42a5b5bcc95a320c3f2400e91f803aa83eefc3fbe3845d5",
+          "sumas": [
+            109,
+            91,
+            4,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 44070,
+          "huella_acta": "b2c1ca6daffabcec4bd2b4b51292abe5d1abada95ba39b7bfca8c34ef94bc812",
+          "sumas": [
+            110,
+            90,
+            5,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 44107,
+          "huella_acta": "02418e8c3ba2f5f1222e49ce5de004664aac4577ce9852cb25d1db84ef53b4f1",
+          "sumas": [
+            111,
+            89,
+            6,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 44144,
+          "huella_acta": "5be86cf56b7dc3d5349f6d86e5e4d753d12f2319f5ce790b31138c28b6c99c91",
+          "sumas": [
+            112,
+            88,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 44181,
+          "huella_acta": "5760d3082ee6c80065bfa3122648a8bab933c4a895b6dbc14c6221ee1e1849a6",
+          "sumas": [
+            113,
+            87,
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 44218,
+          "huella_acta": "492191465079973e5ffee8a507dd177a66f12217cc4f0d9839221e56701b7a75",
+          "sumas": [
+            114,
+            86,
+            2,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 44255,
+          "huella_acta": "ceb8d619480c9d4db95275dff0dbba483e80914f66b7436e17f080bc0a232d6b",
+          "sumas": [
+            115,
+            85,
+            3,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 44292,
+          "huella_acta": "d206a01ed7eae9a9d06decb8cb2aef409c28bd3156acc5ef66525eed444ec414",
+          "sumas": [
+            116,
+            84,
+            4,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 44329,
+          "huella_acta": "e271759f5d5bd6734868b3512f69fed543764fe8a803a6f82dc59bbe634bcdc2",
+          "sumas": [
+            117,
+            83,
+            5,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 44366,
+          "huella_acta": "fff88b1656525d294433d5deee6af9476c4cf7d5d5cb7c0cc143ffbc7dff0e6a",
+          "sumas": [
+            118,
+            82,
+            6,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 44403,
+          "huella_acta": "e00c1e8d401aee6ab204554ee9d1bce7a1baf623f0691b58027f0ca0274e021b",
+          "sumas": [
+            119,
+            81,
+            0,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 44440,
+          "huella_acta": "3a8089acce135e84eb7ca41d3adedb8224eaa18cd26bed3ea95980a43c38f457",
+          "sumas": [
+            120,
+            80,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 44477,
+          "huella_acta": "1202638a3c25803745b51bc7c97262bdddccd733fc6d9748f70ffaa76b272d63",
+          "sumas": [
+            121,
+            79,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 44514,
+          "huella_acta": "7bd19ea9b3c45b127bf30d5e13ff581392d14acaa38c76168b95085d838d22df",
+          "sumas": [
+            122,
+            78,
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 44551,
+          "huella_acta": "9511ddff276fccd96ce8a16c7216078710cca70b89142742000e1dc53f946796",
+          "sumas": [
+            123,
+            77,
+            4,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 44588,
+          "huella_acta": "e287abaeb9be45f1250dd942df963aa22e62044e44968254a4e76e67f38d20df",
+          "sumas": [
+            124,
+            76,
+            5,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 44625,
+          "huella_acta": "498a19249099b458c8bb1bb91f826d81f9cbf5045e2159b3bb408dbd721adbe0",
+          "sumas": [
+            125,
+            75,
+            6,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 44662,
+          "huella_acta": "6f81fd229151e009683c2f37626e42eb729959c11a82a0c5f95ed4bbc313f521",
+          "sumas": [
+            126,
+            74,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 44699,
+          "huella_acta": "2492adbe65648532abeef39ca256a4eeb3c2c8c90a98dd8dfd71d622345edb89",
+          "sumas": [
+            127,
+            73,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 44736,
+          "huella_acta": "267dc755f4772f512dcdd2afd317f5f70db90838cb7c8078c6e1d1f3b7fc087b",
+          "sumas": [
+            128,
+            72,
+            2,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 44773,
+          "huella_acta": "756b24cc61657b89c12e57e164cfa242f28d082594ce81206e7ab1b518b2604f",
+          "sumas": [
+            129,
+            71,
+            3,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 44810,
+          "huella_acta": "e2f105f97cfa22fd94543fc4abf1fdf197602ae1e32b5b9002c38e8f7f8872d9",
+          "sumas": [
+            130,
+            70,
+            4,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 44847,
+          "huella_acta": "aca647fd106aa92ee80c9c29a35ef998ffd89840457ffa7b20cb6808bffdf858",
+          "sumas": [
+            131,
+            69,
+            5,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 44884,
+          "huella_acta": "c8f53f2b59cb8d463def64b804c8c6bfd67793893c9c496fbeb5099041821f65",
+          "sumas": [
+            132,
+            68,
+            6,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 44921,
+          "huella_acta": "0abc2695d82b777a4ef4a3d5c9c5c7453c8179271af2eb5f16ea7327a0826c7f",
+          "sumas": [
+            133,
+            67,
+            0,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 44958,
+          "huella_acta": "540994ba0a8315875fef94085e825a0125fae9c7e48ed67f34f447bde3373ff9",
+          "sumas": [
+            134,
+            66,
+            1,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 44995,
+          "huella_acta": "dd88aebdf94d2e0fd590b52d48d4978b28e8e4dc8626cac09162dee753f7d523",
+          "sumas": [
+            135,
+            65,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 45032,
+          "huella_acta": "002d0dfb6bac1ba677626eee38f8482f9dfc43272e1ef4dc963daf59f4ce976c",
+          "sumas": [
+            136,
+            64,
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 45069,
+          "huella_acta": "11e8c99394af54a45d47e84a016172896cf48150c67eda7420a5e90d9b4baecf",
+          "sumas": [
+            137,
+            63,
+            4,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 45106,
+          "huella_acta": "30a76a1d72e2b07ba92d03c5117eadc2ee4030c0a8b8a267b2d1a7717cfeb6e1",
+          "sumas": [
+            138,
+            62,
+            5,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 45143,
+          "huella_acta": "e849e0efe5ba63c4767e029d25bddb5d30e8b5413b5393b57a9fae9b3bd7ee33",
+          "sumas": [
+            139,
+            61,
+            6,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 45180,
+          "huella_acta": "67cf3ffc2346ec19213ba037c485eeb4f7a778fa2a2163ae51b764cdbeb2cddd",
+          "sumas": [
+            140,
+            60,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 45217,
+          "huella_acta": "b3bafb0cdaf817a269f5baed27296ca6d6779c8b157aac3b4676cad6c989df46",
+          "sumas": [
+            141,
+            59,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 45254,
+          "huella_acta": "9e06c5fcd83dc09e83b57c5922b3f722d3ceac3614a5ac47ccd1c85ddf933d16",
+          "sumas": [
+            142,
+            58,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 45291,
+          "huella_acta": "9b04d493bc33f5c3200529f30cf1c3af5f5a1199c437c44ca73058eb076b507e",
+          "sumas": [
+            143,
+            57,
+            3,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 45328,
+          "huella_acta": "432532bb18a9a3c3f7168daa42a9f10a876428af8d48ce7da988c93d309e662b",
+          "sumas": [
+            144,
+            56,
+            4,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 45365,
+          "huella_acta": "ea05937076a3b32de47d9a6945adbf27500c3f1e6cb3666684e32229bdbd24a5",
+          "sumas": [
+            145,
+            55,
+            5,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 45402,
+          "huella_acta": "507e220d264c2e752012c8bc0e234169a28e1026afca58101af30c55928c629f",
+          "sumas": [
+            146,
+            54,
+            6,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 45439,
+          "huella_acta": "780dfe8d0960bca42f5c24f82c4e7bf4836fcac3eace09637843eee19726ff7c",
+          "sumas": [
+            147,
+            53,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 45476,
+          "huella_acta": "1919ae8ec523776903962186a9aca8c5e6d77994aa988b8bc62cfbefe9d9b2fc",
+          "sumas": [
+            148,
+            52,
+            1,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 45513,
+          "huella_acta": "68f4b004a5c31745d6289b69afabe915a8e21b8959d93c176e03eded8f30244f",
+          "sumas": [
+            149,
+            51,
+            2,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 45550,
+          "huella_acta": "25403e7466300d8d350c45b82eefe690622b52de07684b32fd5669cda05a2e8a",
+          "sumas": [
+            150,
+            50,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 45587,
+          "huella_acta": "ac75fbe408ed25cb930ee411f072a4179749af9269bcb8f07eb60c13d0db310c",
+          "sumas": [
+            151,
+            49,
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 45624,
+          "huella_acta": "61dc9c4cfdcecaa3011e71222908c51a8140c23f60c92bfa3e2aa967d895d6d5",
+          "sumas": [
+            152,
+            48,
+            5,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 45661,
+          "huella_acta": "fb736e81b976e9d6ff33ca2576f6542422e0067b6bd906a7f4121892ac3999d9",
+          "sumas": [
+            153,
+            47,
+            6,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 45698,
+          "huella_acta": "167a02420c9924b2ed0d3b2d959bd387ef8131bde067dc7b35955ca47db61eec",
+          "sumas": [
+            154,
+            46,
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 45735,
+          "huella_acta": "4a96aef02e8a3862e98cdc135ac2818a99a1c0ffe4db413defe271d332854cb1",
+          "sumas": [
+            155,
+            45,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 45772,
+          "huella_acta": "83a7630811778d29b713fdf31c3ae32911fc175ccf4442413286a0274a266564",
+          "sumas": [
+            156,
+            44,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 45809,
+          "huella_acta": "7e5497ce2a61c6e891eff8561601318e33c4a8c56230ffb100a768d0cd83ce66",
+          "sumas": [
+            157,
+            43,
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 45846,
+          "huella_acta": "fe43c901c9a03d7f609fb02ec2c721a0a9f6d71824f0782543598a047f72164a",
+          "sumas": [
+            158,
+            42,
+            4,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 45883,
+          "huella_acta": "f7e48bd313884889561a44b9fe18fecd640654c450c800a4c999f47d2b61bfa2",
+          "sumas": [
+            159,
+            41,
+            5,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 45920,
+          "huella_acta": "0e1d23dddc8404cc2a3580c332edbb3b81a9afb31899c448959846532e2a25b5",
+          "sumas": [
+            160,
+            40,
+            6,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 45957,
+          "huella_acta": "00e5f340034948a6cd75ee60f79f37a757182bb04fc25921bb6924f63e1b8dbc",
+          "sumas": [
+            161,
+            39,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 45994,
+          "huella_acta": "c305dcd1852715fa4dadde764f3cfd07b1883a0d6c2f27945492483257ffeeab",
+          "sumas": [
+            162,
+            38,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 46031,
+          "huella_acta": "dbcb38970f1439d9e6654c4834e071ce623c4953b33a06e69d0313ca34170e70",
+          "sumas": [
+            163,
+            37,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 46068,
+          "huella_acta": "81c74906580ddd32a834d14d21038b7830b74ed178b25e41cf101df17488d985",
+          "sumas": [
+            164,
+            36,
+            3,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 46105,
+          "huella_acta": "692f0433e672ef90039fb2a30c1ec12c3b596cec7db24a0d69e89f485843ec73",
+          "sumas": [
+            165,
+            35,
+            4,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 46142,
+          "huella_acta": "5796a19e90deed4f21aed47562ec19228958071a11da7f83005ed46e18a0498d",
+          "sumas": [
+            166,
+            34,
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 46179,
+          "huella_acta": "3d2557b6a6e68f38758c7c42e11a1e73cc37390ca51eb94cc8e31d57d643f91f",
+          "sumas": [
+            167,
+            33,
+            6,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 46216,
+          "huella_acta": "94135368b138b3e28500284a54090a24044d076ace6893fcb370830c40602948",
+          "sumas": [
+            168,
+            32,
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 46253,
+          "huella_acta": "970c3f5c4054a7b8882de3c27e74a818665031e599c549134d58e65d52b1a3e1",
+          "sumas": [
+            169,
+            31,
+            1,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 46290,
+          "huella_acta": "d51aff70493cbd478505416e3c19c9312db4493758c2ce479ac463beeb40f1a0",
+          "sumas": [
+            170,
+            30,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 46327,
+          "huella_acta": "fc4609dbdbc92345b444a03dd713f1e71061ecb82158f26a5915e753a6342720",
+          "sumas": [
+            171,
+            29,
+            3,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 46364,
+          "huella_acta": "8f117b1b25cfeb8fdcdb849fe202378741af18633d30db2b4c318916393bfef3",
+          "sumas": [
+            172,
+            28,
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 46401,
+          "huella_acta": "270c5affa4b7fc3ce96f52c3fc0df36ded0c478d101d0882b74123de72d2ae2e",
+          "sumas": [
+            173,
+            27,
+            5,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 46438,
+          "huella_acta": "5cfe8b916fc6472e4b9a23d22c657cca65d1dd311fed0736daaafb7f788a9b23",
+          "sumas": [
+            174,
+            26,
+            6,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 46475,
+          "huella_acta": "9d962a2d4385c481fe8e0dd88c3df8e2205b96df8e575a9ad003a9d2a625b57b",
+          "sumas": [
+            175,
+            25,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 46512,
+          "huella_acta": "83254f39890990de3c25a1ae84d083b8d24fcf6d4418e170b920f0b2d47c48a6",
+          "sumas": [
+            176,
+            24,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 46549,
+          "huella_acta": "721f179e0366fdb5fb6e656b6830639afc67e690f7a37905439a5d739b56f036",
+          "sumas": [
+            177,
+            23,
+            2,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 46586,
+          "huella_acta": "6a23e2567a4f7b6cf614c81e64422e8c2258ef8a724b63e747ffa1deed7d6f47",
+          "sumas": [
+            178,
+            22,
+            3,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 46623,
+          "huella_acta": "6537883768f622b178eed54c12f58af970256f535c3532470ff2a35734471ec5",
+          "sumas": [
+            179,
+            21,
+            4,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 46660,
+          "huella_acta": "3da5d417835a86c78a743f9add1bc6b313f779ef35beeb1ddc3b0c9982a0398a",
+          "sumas": [
+            180,
+            20,
+            5,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 46697,
+          "huella_acta": "77bdb2f3657608c95adf522c280e46e4c968f59cf6ef1273b029405ef22a9173",
+          "sumas": [
+            181,
+            19,
+            6,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 46734,
+          "huella_acta": "30ad7cf8808a52241d4d58ee94fe197909b8950676a1bedb20e20ed5f6cad426",
+          "sumas": [
+            182,
+            18,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 46771,
+          "huella_acta": "cd1ca00b32e8d787a81df5268eb900a9106b85fa065fa259fbe29ba5f176bc6c",
+          "sumas": [
+            183,
+            17,
+            1,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 46808,
+          "huella_acta": "f8b50d2c13c736d386d236c5d8826a7e6859f5a8e2f6517ae0e88714af92cbeb",
+          "sumas": [
+            184,
+            16,
+            2,
+            4,
+            1
+          ]
+        },
+        {
+          "casillero": 46845,
+          "huella_acta": "e3cad3de5c4879904e2e75e937105a2629c47324de37eb5236277a86fe850790",
+          "sumas": [
+            185,
+            15,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "casillero": 46882,
+          "huella_acta": "45a0cc43f6476a9067bdbbe3d716c48c4282c51137ed8b472dd203791688c70b",
+          "sumas": [
+            186,
+            14,
+            4,
+            1,
+            0
+          ]
+        },
+        {
+          "casillero": 46919,
+          "huella_acta": "acd592576de3a29ffa6b63b9767d9ed1be74f5fe3896d3c2c377d3a2e51deede",
+          "sumas": [
+            187,
+            13,
+            5,
+            2,
+            1
+          ]
+        },
+        {
+          "casillero": 46956,
+          "huella_acta": "5b8d9e50db27c3e0ff0721a7e5ff412e6b2ad656bc10e206911a329b7606bc84",
+          "sumas": [
+            188,
+            12,
+            6,
+            3,
+            2
+          ]
+        },
+        {
+          "casillero": 46993,
+          "huella_acta": "3060a192c3e7cdff028445284891ad28cc1be6e25463c34dd3ef5f6860e5227b",
+          "sumas": [
+            189,
+            11,
+            0,
+            4,
+            0
+          ]
+        },
+        {
+          "casillero": 47030,
+          "huella_acta": "e6428362bcf4de9236049c710297912935ed1a9a3f4a54bea9cea8c779baf9c1",
+          "sumas": [
+            190,
+            10,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "casillero": 47067,
+          "huella_acta": "2eb4849f5f73be54ea4dd00742f89920f73eccc12aae88431917eceb1663fbb8",
+          "sumas": [
+            191,
+            9,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "casillero": 47104,
+          "huella_acta": "7cdb836e88385c0045d3508012f6351a975f47f6b0c8d8d8ff5920d8864d3877",
+          "sumas": [
+            192,
+            8,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "casillero": 47141,
+          "huella_acta": "27acb31d187436a0847d70544c318e8d2afc8c7d63126184156245fb015ff720",
+          "sumas": [
+            193,
+            7,
+            4,
+            3,
+            1
+          ]
+        },
+        {
+          "casillero": 47178,
+          "huella_acta": "0b7b7fb2298075aff7933580ce0f6adbcf11636c4370702c5a56fe60e02d3cc7",
+          "sumas": [
+            194,
+            6,
+            5,
+            4,
+            2
+          ]
+        },
+        {
+          "casillero": 47215,
+          "huella_acta": "a847e0a6f386f3be60291a51848c124315539f2d6dda04e1460753b89fe8028b",
+          "sumas": [
+            195,
+            5,
+            6,
+            0,
+            0
+          ]
+        },
+        {
+          "casillero": 47252,
+          "huella_acta": "6f9789fdef712f0c092a591564de1c6f8c70badbc0cc9f99a6d2e72e1e8319f5",
+          "sumas": [
+            196,
+            4,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "casillero": 47289,
+          "huella_acta": "803f84f0f86ebc8fb4c7e096197a43d976a19f206a80d4c15eecbb1cc43e31b6",
+          "sumas": [
+            197,
+            3,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "casillero": 47326,
+          "huella_acta": "c3c5795b1f7d4c0fd175c75ac955b4966a5675287b2f724f998d9c7f88d7bfa8",
+          "sumas": [
+            198,
+            2,
+            2,
+            3,
+            0
+          ]
+        },
+        {
+          "casillero": 47363,
+          "huella_acta": "38fb42a1284de4e5b3c597d477fa41c94d6e4df75e215fd8134d6398b47522d1",
+          "sumas": [
+            199,
+            1,
+            3,
+            4,
+            1
+          ]
+        }
+      ],
+      "raiz": {
+        "huella": "774114ec65d0623a4a8c65111e733dfc38ce994d6e0a3d80101348c26ec5fb54",
+        "sumas": [
+          19900,
+          20100,
+          594,
+          400,
+          199
+        ]
+      },
+      "prueba": {
+        "casillero": 40000,
+        "hermanos": [
+          {
+            "huella": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "5b559d6e309cfe5c1da19ac1242c0122a7f7caa7b90a18897095a8404ec85fe4",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "3847f941ebf819807924071bf5f9eb5b37b8c76bf8168cb58857a5dfb98f10c3",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "99368f3ceef398209f5a98511a2ee52c4e4626ec1ac2748d695787a888a6648d",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "225a60fe5f4520be05f665183bc9a8890711d834591563a9fffd6ebf12fba9bd",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "34d38c347ed445bd2eb2c9d769f8252c1f87aa0fb8c5dc1e5e83fd27ce824610",
+            "sumas": [
+              1,
+              199,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "huella": "8a7d5a9555b4397c8091c76503dbb67d510a780e7d726701f1e982bb8f1b7a0e",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "f32ce85d50b454f54276223393c3078a4166a6eaac8f5f4cc0749cbd583356b7",
+            "sumas": [
+              14,
+              786,
+              14,
+              9,
+              5
+            ]
+          },
+          {
+            "huella": "00a49dca31775900a2a3f28a0c9b2054abf54d6d3300f3634d29ab98e778562e",
+            "sumas": [
+              63,
+              1337,
+              21,
+              13,
+              6
+            ]
+          },
+          {
+            "huella": "be03a3e15105f04e38d4314c56571165addf7424c9921fb0e4d4e111e36c8385",
+            "sumas": [
+              247,
+              2353,
+              37,
+              27,
+              13
+            ]
+          },
+          {
+            "huella": "adaacdefcfcd22349f014cb6cbb7142255b518cc4da63eb696ffcfa35bacc28a",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "2b7baf52c8cbd0b65f552fd81d2597df30a3d11be5cde64579b5fe526ac87b60",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "4d8d4a00127901c53de0bed404948dac7fc4bc6c4832f17e4cdcd7c160c7adf5",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "73068106c647b166c785b77535ffe15ed86e51f18dfda908a6ab2f1a01d551c0",
+            "sumas": [
+              19575,
+              15225,
+              521,
+              350,
+              174
+            ]
+          },
+          {
+            "huella": "4e744a98ed22017a45b86e86f9f2ad6899e46073c522181d0f8be547dcb33fd6",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "104b6ea1b45ce0272c4fef41cefc11989d4b253a9824a3fa6e87bf2a200cd3cf",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "huella": "f5b04ab6c09b20e706a64a7b83dda20dfd09fd710cd0b96e3b2364e8baac575f",
+            "sumas": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
