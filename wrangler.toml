@@ -1,0 +1,21 @@
+name = "unicom-api"
+main = "api/worker.js"
+compatibility_date = "2026-11-19"
+workers_dev = true
+
+[vars]
+ORIGENES_PERMITIDOS = "https://alexischocolate.github.io,http://localhost:8000,http://127.0.0.1:8000"
+
+[[durable_objects.bindings]]
+name = "VENTANILLA"
+class_name = "VentanillaUnica"
+
+# En el plan gratuito, los Durable Objects solo existen con almacenamiento SQLite.
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["VentanillaUnica"]
+
+[[d1_databases]]
+binding = "BASE"
+database_name = "unicom"
+database_id = "PEGAR_AQUI_EL_ID_DE_D1"
