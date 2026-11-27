@@ -1,0 +1,30 @@
+{
+  "numero": 4,
+  "huella": "a4758d9fc87c974e8efc96cfa2d189453376ed22b0631984b5eaff5f97a7e656",
+  "raiz_tablero": "e61e6f8a8a139a00923181ffe26f831336cbaf70ebdf55ea8929dc8990619176",
+  "renglones": 12,
+  "hojas": [
+    {
+      "casillero": 45123,
+      "huellaActa": "846799992e84b305e993152fd5beee834dfca91b45665b17199f113cc2196389",
+      "sumas": [
+        120,
+        97,
+        6,
+        4,
+        1
+      ]
+    },
+    {
+      "casillero": 45124,
+      "huellaActa": "8a0f10b7ce5fd08927234977cc288b74642dd9a8904662a173303db88269e736",
+      "sumas": [
+        80,
+        60,
+        3,
+        2,
+        0
+      ]
+    }
+  ]
+}

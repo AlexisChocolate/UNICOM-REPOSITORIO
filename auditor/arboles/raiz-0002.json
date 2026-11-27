@@ -1,0 +1,19 @@
+{
+  "numero": 2,
+  "huella": "09126d1bbe7c51daf0d0183c93a9e082a4954e79a89d516fa027a7e24ee74339",
+  "raiz_tablero": "e8cdcadef4288b9318c914abf8fa0416a8567d9b2b0fb0d564e4de9ad696d410",
+  "renglones": 6,
+  "hojas": [
+    {
+      "casillero": 45123,
+      "huellaActa": "846799992e84b305e993152fd5beee834dfca91b45665b17199f113cc2196389",
+      "sumas": [
+        120,
+        97,
+        6,
+        4,
+        1
+      ]
+    }
+  ]
+}

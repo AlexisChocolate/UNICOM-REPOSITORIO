@@ -1,0 +1,28 @@
+{
+  "fecha": "2026-11-27T17:17:07.806Z",
+  "alertas": [],
+  "avisos": [
+    {
+      "revision": 3,
+      "mensaje": "La foto de la mesa 045123 todavía no está en el servidor"
+    },
+    {
+      "revision": 3,
+      "mensaje": "La foto de la mesa 045124 todavía no está en el servidor"
+    }
+  ],
+  "resumen": {
+    "fuente": "https://unicom-api.myk-unicom.workers.dev",
+    "renglones": 12,
+    "actas": 2,
+    "raices": 5,
+    "raiz_tablero_recalculada": "e61e6f8a8a139a00923181ffe26f831336cbaf70ebdf55ea8929dc8990619176",
+    "totales": {
+      "P01": 200,
+      "P02": 157,
+      "blancos": 9,
+      "nulos": 6,
+      "impugnados": 1
+    }
+  }
+}
