@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNICOM · Verificador ciudadano</title>
+  <link rel="stylesheet" href="estilos.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-RzAL5ah1Q315YiagDEsrSlkPoOVkrvmNfyb1Z0Re9i0='; connect-src 'self' https://unicom-api.unicom-puno.workers.dev http://127.0.0.1:* http://localhost:* https://api.drand.sh https://mempool.space; img-src 'self' blob:; style-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <script type="importmap">{"imports":{"@noble/curves/":"./vendor/noble-curves/","@noble/hashes/":"./vendor/noble-hashes/"}}</script>
+</head>
+<body>
+  <header class="barra-superior">
+    <div class="contenido">
+      <a class="logo" href="index.html">UNICOM</a>
+      <nav class="navegacion" aria-label="Pantallas">
+        <a href="index.html">Inicio</a>
+        <a href="mesa.html">Mesa</a>
+        <a href="verificador.html" aria-current="page">Verificador</a>
+        <a href="partido.html">Partido</a>
+        <a href="auditor.html">Auditor</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="encabezado">
+      <h1>Verificador ciudadano</h1>
+      <p>Comprueba por tu cuenta, desde tu celular, que el resultado corresponde a las actas firmadas. Tu navegador hace todas las cuentas: no hace falta confiar en el servidor.</p>
+    </div>
+    <div id="estado-conexion" class="estado-conexion"></div>
+
+    <div class="rejilla dos">
+      <section class="ancho-completo">
+        <h2>Comprobar una mesa</h2>
+        <p class="nota">Elige una mesa: se revisan la huella del acta, las firmas, el padrón, la foto y su camino hasta la raíz del tablero.</p>
+        <div class="acciones">
+          <select id="mesas" aria-label="Mesa"></select>
+          <button id="comprobar" type="button" disabled>Comprobar</button>
+        </div>
+        <div id="resultado-mesa"></div>
+      </section>
+
+      <section>
+        <h2>Resultados en vivo</h2>
+        <p class="nota">Es el estado actual del servidor y no está firmado. Lo firmado es la cadena de raíces.</p>
+        <div id="resultados">Cargando…</div>
+      </section>
+
+      <section>
+        <h2>Cadena de raíces firmadas</h2>
+        <p class="nota">Cada raíz resume todas las actas hasta ese momento, lleva la firma del servidor y la huella de la raíz anterior. Si alguien quita o cambia una, la cadena se rompe.</p>
+        <div id="cadena">Cargando…</div>
+      </section>
+    </div>
+  </main>
+
+  <footer>El anclaje en Bitcoin de cada raíz (archivo .ots) se comprueba con <code>node auditor/verificar-anclajes.js</code>; el navegador todavía no lo hace.</footer>
+
+  <script type="module" src="verificador.js"></script>
+</body>
+</html>

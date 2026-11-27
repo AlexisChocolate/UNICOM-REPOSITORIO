@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNICOM · Panel del auditor</title>
+  <link rel="stylesheet" href="estilos.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-RzAL5ah1Q315YiagDEsrSlkPoOVkrvmNfyb1Z0Re9i0='; connect-src 'self' https://unicom-api.unicom-puno.workers.dev http://127.0.0.1:* http://localhost:* https://api.drand.sh https://mempool.space; img-src 'self' blob:; style-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <script type="importmap">{"imports":{"@noble/curves/":"./vendor/noble-curves/","@noble/hashes/":"./vendor/noble-hashes/"}}</script>
+</head>
+<body>
+  <header class="barra-superior">
+    <div class="contenido">
+      <a class="logo" href="index.html">UNICOM</a>
+      <nav class="navegacion" aria-label="Pantallas">
+        <a href="index.html">Inicio</a>
+        <a href="mesa.html">Mesa</a>
+        <a href="verificador.html">Verificador</a>
+        <a href="partido.html">Partido</a>
+        <a href="auditor.html" aria-current="page">Auditor</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="encabezado">
+      <h1>Panel del auditor</h1>
+      <p>El auditor vigila que todo UNICOM siga íntegro usando solo datos públicos. No alerta porque la raíz cambie (eso pasa con cada acta): alerta solo ante una inconsistencia.</p>
+    </div>
+    <div id="estado-conexion" class="estado-conexion"></div>
+
+    <div class="rejilla dos">
+      <section class="ancho-completo">
+        <h2>Auditar ahora en este navegador</h2>
+        <p class="nota">Tu navegador lee el cuaderno, las raíces, los recibos y las fotos, recalcula el tablero entero y revisa las 7 condiciones del Paso 9. Así este navegador se vuelve un auditor más.</p>
+        <button id="auditar" type="button" disabled>Auditar</button>
+        <div id="auditoria"></div>
+      </section>
+
+      <section>
+        <h2>Informe del auditor de GitHub Actions</h2>
+        <p class="nota">Lo publica el auditor que corre cada pocos minutos en el repositorio. Es nuestro, no independiente: por eso conviene que partidos y universidades corran el suyo.</p>
+        <div id="informe-publicado">Cargando…</div>
+      </section>
+
+      <section>
+        <h2>El detective</h2>
+        <p class="nota">Compara la copia del árbol que se guardó cuando se ancló una raíz con lo que dice el servidor hoy, y baja hasta la mesa que cambió.</p>
+        <div class="campo">
+          <label for="arbol-anclado">Copia del árbol anclado <small>Archivo <code>auditor/arboles/raiz-NNNN.json</code> o la copia que descargues aquí.</small></label>
+          <input id="arbol-anclado" type="file" accept="application/json,.json">
+        </div>
+        <div class="acciones">
+          <button id="investigar" type="button" disabled>Investigar</button>
+          <button id="descargar-arbol" type="button" class="secundario" disabled>Descargar copia del árbol de la última raíz</button>
+        </div>
+        <div id="detective"></div>
+      </section>
+
+      <section class="ancho-completo">
+        <h2>Sorteo al azar (Carril B)</h2>
+        <p class="nota">El azar sale de tres fuentes que nadie controla a la vez: dados lanzados en público, una ronda de drand y un bloque de Bitcoin. El sorteo es sobre TODAS las mesas: la lista de prioridad (Carril A) nunca lo condiciona.</p>
+        <div class="votos-rejilla">
+          <div class="campo">
+            <label for="dados">Tiradas de dados <small>Al menos 10, cada una del 1 al 6, sin espacios.</small></label>
+            <input id="dados" type="text" inputmode="numeric" autocomplete="off" placeholder="3615244163">
+          </div>
+          <div class="campo">
+            <label for="ronda-drand">Ronda de drand (quicknet) <small>Debe anunciarse antes de cerrar el tablero.</small></label>
+            <input id="ronda-drand" type="number" min="1" step="1">
+          </div>
+          <div class="campo">
+            <label for="hash-bloque">Hash del bloque de Bitcoin <small>64 caracteres hexadecimales.</small></label>
+            <input id="hash-bloque" type="text" autocomplete="off">
+          </div>
+          <div class="campo">
+            <label for="cantidad-mesas">Mesas a sortear</label>
+            <input id="cantidad-mesas" type="number" min="1" step="1" value="1">
+          </div>
+          <div class="campo">
+            <label for="cantidad-cedulas">Cédulas por mesa sorteada</label>
+            <input id="cantidad-cedulas" type="number" min="1" step="1" value="5">
+          </div>
+        </div>
+        <div class="acciones">
+          <button id="ronda-actual" type="button" class="secundario">Usar la ronda de drand de ahora</button>
+          <button id="ultimo-bloque" type="button" class="secundario">Usar el último bloque de Bitcoin</button>
+          <button id="sortear" type="button" disabled>Sortear</button>
+        </div>
+        <div id="sorteo"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>La revisión 7 (que nadie reescribió la historia del repositorio) necesita un clon propio del repositorio: la hacen <code>node auditor/correr-auditor.js</code> y el auditor de GitHub Actions.</footer>
+
+  <script type="module" src="auditor.js"></script>
+</body>
+</html>

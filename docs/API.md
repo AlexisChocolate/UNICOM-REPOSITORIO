@@ -24,7 +24,7 @@
 
 - Todo es JSON en UTF-8. Las huellas, llaves y firmas van en **hexadecimal en minúscula**: una huella SHA-256 tiene 64 caracteres; una llave pública Ed25519, 64; una firma Ed25519, 128.
 - **JSON canónico** (lo que se firma): claves ordenadas, sin espacios, solo enteros, `true`/`false`/`null` y texto ASCII imprimible. Nada de tildes ni decimales: los partidos van como códigos (`"P01"`). La web **no** debe armarlo a mano: usa `canonico()` o `huellaActa()` del núcleo.
-- **CORS:** el Worker solo deja leer sus respuestas a páginas de `https://alexischocolate.github.io`, `http://localhost:8000` y `http://127.0.0.1:8000`. Si la web se sirve desde otro lugar, hay que avisar para agregarlo en `wrangler.toml`.
+- **CORS:** el Worker solo deja leer sus respuestas a páginas de `https://alexischocolate.github.io`, `http://localhost:8000` y `http://127.0.0.1:8000`. Si la web se sirve desde otro lugar, hay que avisar para agregarlo en `wrangler.toml`. Encabezados permitidos: `content-type`, `authorization`, `x-unicom-llave` y `x-unicom-firma` (los dos últimos los usa `POST /fotos`; hasta el 25/11/2026 faltaban y el navegador cortaba la subida de fotos).
 - **Errores:** siempre con esta forma y el código HTTP correspondiente:
   ```json
   { "error": "mesa_sin_acta", "mensaje": "La mesa 045999 todavía no tiene un acta registrada" }
@@ -400,15 +400,13 @@ Llevan el encabezado `Authorization: Bearer <CLAVE_ADMIN>`. Sin él: `401 no_aut
 El núcleo está en `nucleo/` y se carga como **módulo ES, sin compilar**. Solo depende de `@noble/curves` (Ed25519 para firmas y BLS12-381 para drand). La web **no** debe importar nada de `api/`: ahí está el SDK de Anthropic, que vive solo en el servidor. Como el navegador no entiende el nombre `@noble/curves/...`, la página necesita un **import map** antes de cualquier `<script type="module">`:
 
 ```html
-<script type="importmap">
-{ "imports": { "@noble/curves/": "https://esm.sh/@noble/curves@2.4.0/" } }
-</script>
-<script type="module">
-  import { huellaActa, verificarDocumento } from "./nucleo/index.js";
-</script>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-RzAL5ah1Q315YiagDEsrSlkPoOVkrvmNfyb1Z0Re9i0='; …">
+<script type="importmap">{"imports":{"@noble/curves/":"./vendor/noble-curves/","@noble/hashes/":"./vendor/noble-hashes/"}}</script>
 ```
 
-- La URL de esm.sh responde (comprobado el 22/11/2026). **No se ha probado todavía en un navegador**: le toca al chat del frontend. La web necesita acceso a la carpeta `nucleo/` (copiarla o servirla desde la raíz del repositorio en GitHub Pages).
+- **La librería se sirve desde el propio repositorio**, en `web/vendor/`: es una copia sin cambios de los `.js` de `@noble/curves` 2.4.0 y `@noble/hashes` 2.4.0 tomada de `node_modules` (con su `LICENSE` y su `package.json`). Antes se bajaba de esm.sh. Se cambió para que un ataque a ese servidor no pueda hacer que el verificador diga "firma válida" a todo. Para actualizarla: `npm install` de la versión nueva y volver a copiar los `.js` (sin `src/` ni `.d.ts`).
+- **CSP en cada página:** solo se ejecuta código del mismo sitio más el import map, cuya huella SHA-256 está en la regla. Por eso el import map va **en una sola línea**: si se cambia aunque sea un espacio, hay que recalcular la huella o el navegador lo bloquea. La regla también limita a quién puede hablar la página: el Worker publicado, `127.0.0.1`/`localhost` (plan B), drand y mempool.space.
+- **Prueba en el navegador:** el 25/11/2026 se probó en Edge sin ventana contra un Worker local, y todo el recorrido de las cuatro pantallas pasó. La web necesita la carpeta `nucleo/`: se sirve desde la raíz del repositorio, como se explica en la sección 7.
 - Necesita un navegador con Ed25519 en Web Crypto (Chrome actual). Si `generarLlaveNoExportable()` falla, la app debe avisar (arquitectura, sec. 5.1).
 
 ### Funciones que usa la web (todas desde `nucleo/index.js`)
@@ -462,7 +460,26 @@ Formato de `informe.json`: `{ fecha, alertas: [{ revision, mensaje, detalle }], 
 
 Archivos públicos en el repositorio: `raices/NNNN.json` (JSON canónico de cada raíz firmada), `raices/NNNN.json.ots` (su sello), `fotos/<huella>.jpg`, `auditor/arboles/raiz-NNNN.json` (`{ numero, huella, raiz_tablero, renglones, hojas: [{ casillero, huellaActa, sumas }] }`).
 
-## 7. Lo que falta y depende del autor
+## 7. Pantallas de la web (`web/`)
+
+Páginas estáticas, sin compilar. Se sirven desde la **raíz del repositorio** (porque importan `../nucleo/`, `../auditor/` y leen `../raices/`): en local, `python -m http.server 8000` desde la raíz y abrir `http://localhost:8000/web/`; en GitHub Pages, publicar la raíz del repositorio.
+
+| Archivo | Quién | Qué usa |
+|---|---|---|
+| `index.html` | Todos | Portada con las cuatro pantallas |
+| `mesa.html` + `mesa.js` | Rosa (Pasos 0 a 6) | `generarLlaveNoExportable` (llave en IndexedDB), padrón desde `GET /cuaderno` + `reconstruirEstado`, `POST /padron` provisional con la clave de administración (no se guarda), `revisarSumas`, `POST /lector` + `contrastar`, `validarPaquete` + `huellaActa` + `firmarHuella`, `POST /fotos`, `POST /actas`, `verificarDocumento` del recibo con la llave de la génesis, `POST /decisiones`, `GET /actas/{mesa}` + `verificarInclusion`. Las actas selladas sin señal quedan en IndexedDB para reintentar; los recibos, en `localStorage`. |
+| `verificador.html` + `verificador.js` | Juan (Paso 12) | Cadena de raíces (comparada con `raices/` del repositorio si el servidor es el publicado), tablero en vivo frente a la última raíz firmada y examen de una mesa (`?mesa=045123`). |
+| `partido.html` + `partido.js` | Partido Río (Paso 7) | Llave de personero, examen de la mesa con su foto y `POST /opiniones` firmado (el motivo se pasa a ASCII). |
+| `auditor.html` + `auditor.js` | Auditores (Pasos 9 a 11) | `auditar()` de `auditor/auditor.js` en el navegador (revisiones 1 a 6), informe publicado en `auditor/publicado/`, copia del árbol de la última raíz y detective (`investigar()`), sorteo del Carril B con drand y mempool.space. |
+| `comun.js`, `vista-acta.js`, `estilos.css` | — | Dirección del API, pedidos, IndexedDB, examen y dibujo de un acta, estilos responsive. |
+
+**Qué servidor usa:** en `localhost` o `127.0.0.1`, `http://127.0.0.1:8787` (plan B); en cualquier otro lugar, el Worker publicado. Se cambia con `?api=<dirección>` (queda guardado para las demás pantallas) y se vuelve a lo automático con `?api=auto`. **Solo se aceptan** el Worker publicado y `http://localhost:<puerto>` o `http://127.0.0.1:<puerto>`: cualquier otra dirección se ignora y la página avisa en rojo, para que un enlace no pueda desviar las actas a un impostor.
+
+**De dónde sale la confianza:** con el Worker publicado, la llave del servidor se toma de `raices/0000-genesis.json` del repositorio. Si el servidor no muestra raíces o la cadena no cuadra con esa génesis, el recibo **no** se marca como verificado. La prueba de inclusión de una mesa se compara con la `raiz_tablero` de la última raíz **firmada**: si llegaron actas después, sale en amarillo hasta la siguiente publicación. En el plan B se usa la génesis del propio servidor local. Las firmas de un acta se comprueban con el padrón vigente en su renglón, así que un acta firmada antes de un reemplazo de llave sigue en verde.
+
+**Pendiente en la web:** cofirma del personero desde su propio celular, verificación del `.ots` en el navegador y el verificador descargable con huella anclada (Paso 12).
+
+## 8. Lo que falta y depende del autor
 
 - **Lector de IA real:** cargar créditos en la consola de Anthropic, fijar un tope de gasto y guardar el secreto `ANTHROPIC_API_KEY` en el Worker. Hasta entonces responde `lectura_pendiente`.
 - **Publicación y anclaje automáticos:** los flujos de GitHub Actions corren cuando esta rama llegue a `main` en GitHub.

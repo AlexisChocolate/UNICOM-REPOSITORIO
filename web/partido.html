@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNICOM · Vista del partido</title>
+  <link rel="stylesheet" href="estilos.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-RzAL5ah1Q315YiagDEsrSlkPoOVkrvmNfyb1Z0Re9i0='; connect-src 'self' https://unicom-api.unicom-puno.workers.dev http://127.0.0.1:* http://localhost:* https://api.drand.sh https://mempool.space; img-src 'self' blob:; style-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <script type="importmap">{"imports":{"@noble/curves/":"./vendor/noble-curves/","@noble/hashes/":"./vendor/noble-hashes/"}}</script>
+</head>
+<body>
+  <header class="barra-superior">
+    <div class="contenido">
+      <a class="logo" href="index.html">UNICOM</a>
+      <nav class="navegacion" aria-label="Pantallas">
+        <a href="index.html">Inicio</a>
+        <a href="mesa.html">Mesa</a>
+        <a href="verificador.html">Verificador</a>
+        <a href="partido.html" aria-current="page">Partido</a>
+        <a href="auditor.html">Auditor</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="encabezado">
+      <h1>Vista del partido</h1>
+      <p>Aunque tu partido no haya tenido personero en la mesa, puedes revisar a distancia la foto sellada y los números, y dejar firmado tu respaldo o tu objeción.</p>
+    </div>
+    <div id="estado-conexion" class="estado-conexion"></div>
+
+    <div class="rejilla dos">
+      <section>
+        <h2>Llave del partido</h2>
+        <p class="nota">Con esta llave firmas tus respaldos y objeciones. Se crea en este navegador y no se puede copiar.</p>
+        <div class="campo">
+          <label for="partido">Partido</label>
+          <select id="partido"></select>
+        </div>
+        <div class="acciones">
+          <button id="crear-llave" type="button">Crear la llave del personero</button>
+          <button id="comprobar-llave" type="button" class="secundario">¿Está en el padrón?</button>
+        </div>
+        <div id="llave-estado"></div>
+        <details>
+          <summary>Registro provisional del piloto</summary>
+          <p class="nota">En la elección, el partido registra a sus personeros con su firma. En el piloto, quien administra el servidor puede hacerlo con la clave de administración, que no se guarda.</p>
+          <div class="campo">
+            <label for="clave-admin">Clave de administración</label>
+            <input id="clave-admin" type="password" autocomplete="off">
+          </div>
+          <button id="registrar-provisional" type="button" class="secundario">Registrar como personero</button>
+          <div id="registro-resultado"></div>
+        </details>
+      </section>
+
+      <section>
+        <h2>Respaldar u objetar</h2>
+        <p class="nota">Tu opinión queda firmada en el cuaderno, enlazada a la huella del acta. Señala, no cambia el acta: el papel manda.</p>
+        <div class="campo">
+          <label for="tipo-opinion">Qué quieres dejar</label>
+          <select id="tipo-opinion">
+            <option value="respaldo">Respaldo: el acta coincide con la foto</option>
+            <option value="objecion">Objeción: algo no coincide</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="motivo">Motivo <small>Hasta 200 caracteres. Las tildes y la ñ se quitan antes de firmar (el formato firmado solo admite ASCII).</small></label>
+          <textarea id="motivo" maxlength="200"></textarea>
+        </div>
+        <button id="firmar-opinion" type="button" disabled>Firmar y enviar</button>
+        <div id="opinion-resultado"></div>
+      </section>
+
+      <section class="ancho-completo">
+        <h2>Revisar una mesa</h2>
+        <div class="acciones">
+          <select id="mesas" aria-label="Mesa"></select>
+          <button id="revisar" type="button" disabled>Revisar</button>
+        </div>
+        <div id="resultado-mesa"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>Datos de prueba del piloto. Ejemplo: el Partido Río no mandó personero a la mesa 045123 de Juliaca y revisa el acta desde aquí.</footer>
+
+  <script type="module" src="partido.js"></script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+:root {
+  --fondo: #f3f4f1;
+  --tarjeta: #ffffff;
+  --texto: #1c2321;
+  --suave: #59625f;
+  --borde: #c9ccd6;
+  --borde-control: #858a97;
+  --marca: #4b2a7b;
+  --marca-suave: #eee8f6;
+  --acento: #4b2a7b;
+  --foco: #6a4bb0;
+  --ok: #17703f;
+  --ok-fondo: #e2f3e8;
+  --mal: #ad2a20;
+  --mal-fondo: #fbe5e2;
+  --aviso: #855700;
+  --aviso-fondo: #fff1d4;
+  --radio: 10px;
+  --radio-control: 4px;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+.barra-superior {
+  background: var(--marca);
+  color: #fff;
+}
+
+.barra-superior .contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 10px 16px;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.navegacion a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: var(--radio-control);
+  color: #e4dcf1;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.navegacion a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.navegacion a[aria-current="page"] {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+.barra-superior a:focus-visible {
+  outline-color: #fff;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.encabezado h1 {
+  margin: 8px 0 4px;
+  font-size: 1.5rem;
+}
+
+.encabezado p {
+  margin: 0 0 12px;
+  color: var(--suave);
+}
+
+.estado-conexion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.rejilla {
+  display: grid;
+  gap: 20px;
+}
+
+section,
+.tarjeta {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 20px;
+  min-width: 0;
+}
+
+section h2 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.numero-paso {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--marca);
+  color: #fff;
+  font-size: 0.85rem;
+  flex: none;
+}
+
+.nota {
+  margin: 0 0 12px;
+  font-size: 0.92rem;
+  color: var(--suave);
+}
+
+.insignia {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--marca-suave);
+  color: var(--marca);
+}
+
+.insignia.ok {
+  background: var(--ok-fondo);
+  color: var(--ok);
+}
+
+.insignia.mal {
+  background: var(--mal-fondo);
+  color: var(--mal);
+}
+
+.insignia.aviso {
+  background: var(--aviso-fondo);
+  color: var(--aviso);
+}
+
+/* El espaciado entre caracteres ayuda a comparar dos huellas a ojo, carácter por carácter. */
+.huella {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  line-height: 1.7;
+  word-break: break-all;
+  color: var(--texto);
+  background: var(--fondo);
+  padding: 6px 10px;
+  margin: 4px 0;
+  border-radius: var(--radio-control);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.campo {
+  margin-bottom: 12px;
+}
+
+.campo small {
+  display: block;
+  color: var(--suave);
+  font-weight: 400;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  font: inherit;
+  padding: 8px 12px;
+  /* WCAG 1.4.11 pide 3:1 para el borde de un control: #858a97 da 3,45:1 sobre blanco. */
+  border: 1px solid var(--borde-control);
+  border-radius: var(--radio-control);
+  background: #fff;
+  color: var(--texto);
+}
+
+textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
+}
+
+input[type="file"] {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 0;
+  font: inherit;
+}
+
+.casilla {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font-weight: 500;
+}
+
+.casilla input {
+  width: 22px;
+  height: 22px;
+}
+
+button,
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 16px;
+  font: inherit;
+  font-weight: 600;
+  border-radius: var(--radio-control);
+  border: 1px solid var(--acento);
+  background: var(--acento);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button.secundario,
+.boton.secundario {
+  background: #fff;
+  color: var(--acento);
+}
+
+button.peligro {
+  background: #fff;
+  color: var(--mal);
+  border-color: var(--mal);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 4px;
+}
+
+.mensaje {
+  padding: 10px 12px;
+  border-radius: var(--radio-control);
+  margin: 8px 0;
+  background: var(--marca-suave);
+}
+
+.mensaje.ok {
+  background: var(--ok-fondo);
+  color: var(--ok);
+}
+
+.mensaje.mal {
+  background: var(--mal-fondo);
+  color: var(--mal);
+}
+
+.mensaje.aviso {
+  background: var(--aviso-fondo);
+  color: var(--aviso);
+}
+
+.mensaje ul {
+  margin: 4px 0 0;
+  padding-left: 20px;
+}
+
+/* Franja y símbolo en vez de caja teñida: en el auditor hay 7 seguidas y el color de fondo entero las vuelve un bloque. */
+.comprobacion {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 0 var(--radio-control) var(--radio-control) 0;
+  border-left: 4px solid var(--marca);
+  margin: 6px 0;
+  background: var(--fondo);
+}
+
+.comprobacion.ok {
+  border-left-color: var(--ok);
+}
+
+.comprobacion.mal {
+  border-left-color: var(--mal);
+  background: var(--mal-fondo);
+}
+
+.comprobacion.aviso {
+  border-left-color: var(--aviso);
+}
+
+.comprobacion .marca {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--marca);
+}
+
+.comprobacion.ok .marca {
+  background: var(--ok);
+}
+
+.comprobacion.mal .marca {
+  background: var(--mal);
+}
+
+.comprobacion.aviso .marca {
+  background: var(--aviso);
+}
+
+.comprobacion small {
+  display: block;
+  color: var(--suave);
+}
+
+.fila-voto {
+  margin: 10px 0;
+}
+
+.fila-voto .nombre {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.barra {
+  height: 10px;
+  background: var(--borde);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.barra span {
+  display: block;
+  height: 100%;
+  background: var(--acento);
+}
+
+.vista-previa {
+  display: block;
+  max-width: 100%;
+  max-height: 320px;
+  border-radius: var(--radio-control);
+  border: 1px solid var(--borde);
+  margin: 8px 0;
+}
+
+.votos-rejilla {
+  display: grid;
+  gap: 0 12px;
+}
+
+.tabla-tarjetas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.tabla-tarjetas th,
+.tabla-tarjetas td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--borde);
+  vertical-align: top;
+}
+
+.tabla-tarjetas td.numero,
+.tabla-tarjetas th.numero {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.color-verde {
+  background: var(--ok-fondo);
+}
+
+.color-amarillo {
+  background: var(--aviso-fondo);
+}
+
+.color-rojo {
+  background: var(--mal-fondo);
+}
+
+.punto {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.punto.verde {
+  background: var(--ok);
+}
+
+.punto.amarillo {
+  background: #d39b00;
+}
+
+.punto.rojo {
+  background: var(--mal);
+}
+
+.lista-simple {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista-simple li {
+  border-top: 1px solid var(--borde);
+  padding: 10px 0;
+}
+
+.lista-simple li:first-child {
+  border-top: 0;
+}
+
+.lado-a-lado {
+  display: grid;
+  gap: 12px;
+}
+
+.lado-a-lado .tarjeta h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.portada {
+  display: grid;
+  gap: 16px;
+}
+
+.portada a.tarjeta {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-left: 5px solid var(--marca);
+}
+
+.portada a.tarjeta:hover {
+  border-color: var(--foco) var(--foco) var(--foco) var(--marca);
+}
+
+.portada h2 {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+}
+
+details summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+pre {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  background: var(--fondo);
+  padding: 10px;
+  border-radius: var(--radio-control);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 8px 16px 32px;
+  color: var(--suave);
+  font-size: 0.85rem;
+}
+
+/* Paso transversal del plan: en pantallas angostas las tablas anchas se muestran como tarjetas, sin desplazamiento horizontal. */
+@media (max-width: 640px) {
+  .tabla-tarjetas thead {
+    display: none;
+  }
+
+  .tabla-tarjetas,
+  .tabla-tarjetas tbody,
+  .tabla-tarjetas tr,
+  .tabla-tarjetas td {
+    display: block;
+    width: 100%;
+  }
+
+  .tabla-tarjetas tr {
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-control);
+    margin-bottom: 8px;
+    padding: 4px 8px;
+  }
+
+  .tabla-tarjetas td {
+    border-bottom: 0;
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .tabla-tarjetas td.numero {
+    text-align: right;
+  }
+
+  .tabla-tarjetas td::before {
+    content: attr(data-titulo);
+    font-weight: 600;
+    color: var(--suave);
+    text-align: left;
+  }
+}
+
+/* Solo en pantallas anchas y altas: en el celular, con el teclado abierto, la barra en dos filas taparía media pantalla. */
+@media (min-width: 641px) and (min-height: 600px) {
+  .barra-superior {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  section {
+    scroll-margin-top: 80px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (min-width: 720px) {
+  .votos-rejilla {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lado-a-lado {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portada {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 960px) {
+  .rejilla.dos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rejilla.dos > .ancho-completo {
+    grid-column: 1 / -1;
+  }
+}

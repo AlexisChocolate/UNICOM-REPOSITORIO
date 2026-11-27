@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNICOM · App de mesa</title>
+  <link rel="stylesheet" href="estilos.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-RzAL5ah1Q315YiagDEsrSlkPoOVkrvmNfyb1Z0Re9i0='; connect-src 'self' https://unicom-api.unicom-puno.workers.dev http://127.0.0.1:* http://localhost:* https://api.drand.sh https://mempool.space; img-src 'self' blob:; style-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <script type="importmap">{"imports":{"@noble/curves/":"./vendor/noble-curves/","@noble/hashes/":"./vendor/noble-hashes/"}}</script>
+</head>
+<body>
+  <header class="barra-superior">
+    <div class="contenido">
+      <a class="logo" href="index.html">UNICOM</a>
+      <nav class="navegacion" aria-label="Pantallas">
+        <a href="index.html">Inicio</a>
+        <a href="mesa.html" aria-current="page">Mesa</a>
+        <a href="verificador.html">Verificador</a>
+        <a href="partido.html">Partido</a>
+        <a href="auditor.html">Auditor</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="encabezado">
+      <h1>App de mesa</h1>
+      <p>Fotografía el acta, digita los votos, deja que la IA te avise si algo no coincide, sella y envía. El papel manda: la app avisa, nunca bloquea.</p>
+    </div>
+    <div id="estado-conexion" class="estado-conexion"></div>
+
+    <div class="rejilla dos">
+      <section id="paso-sello">
+        <h2><span class="numero-paso">0</span>Mi sello digital</h2>
+        <p class="nota">Tu sello es una llave que se crea en este celular y nunca sale de él. Con ella firmas el acta.</p>
+        <div class="campo">
+          <label for="mesa">Número de mesa</label>
+          <input id="mesa" type="text" inputmode="numeric" maxlength="6" value="045123" autocomplete="off">
+        </div>
+        <div class="acciones">
+          <button id="crear-sello" type="button">Crear mi sello</button>
+          <button id="comprobar-padron" type="button" class="secundario">¿Estoy en el padrón?</button>
+        </div>
+        <div id="sello-estado"></div>
+        <details>
+          <summary>Registro provisional del piloto</summary>
+          <p class="nota">En la elección, la ONPE registra tu llave con su firma. En el piloto, quien administra el servidor puede registrarla con la clave de administración. La clave solo se usa para esta petición y no se guarda.</p>
+          <div class="campo">
+            <label for="clave-admin">Clave de administración</label>
+            <input id="clave-admin" type="password" autocomplete="off">
+          </div>
+          <button id="registrar-provisional" type="button" class="secundario">Registrar mi llave en el padrón</button>
+          <div id="registro-resultado"></div>
+        </details>
+      </section>
+
+      <section id="paso-foto">
+        <h2><span class="numero-paso">1</span>Foto del acta</h2>
+        <p class="nota">Primero la foto. Su huella (un código que cambia si cambia un solo punto de la imagen) entra al paquete sellado.</p>
+        <div class="campo">
+          <label for="foto-acta">Foto del acta de escrutinio</label>
+          <input id="foto-acta" type="file" accept="image/jpeg,image/png,image/webp" capture="environment">
+        </div>
+        <div id="foto-acta-info"></div>
+        <div class="campo">
+          <label for="foto-precinto">Foto del precinto del sobre de cédulas <small>Opcional. Permite comprobar después que el sobre no se abrió.</small></label>
+          <input id="foto-precinto" type="file" accept="image/jpeg,image/png,image/webp" capture="environment">
+        </div>
+        <div id="foto-precinto-info"></div>
+        <div class="campo">
+          <label for="numero-precinto">Número del precinto <small>Letras, dígitos o guiones (hasta 32).</small></label>
+          <input id="numero-precinto" type="text" maxlength="32" autocomplete="off">
+        </div>
+      </section>
+
+      <section id="paso-votos" class="ancho-completo">
+        <h2><span class="numero-paso">2</span>Votos del acta</h2>
+        <p class="nota">Digita lo que dice el papel. Si las sumas no cuadran, la app te avisa, pero puedes seguir: el error puede estar en el papel.</p>
+        <div id="votos" class="votos-rejilla"></div>
+        <div class="votos-rejilla">
+          <div class="campo">
+            <label for="electores-habiles">Electores hábiles</label>
+            <input id="electores-habiles" type="number" min="0" step="1" inputmode="numeric">
+          </div>
+          <div class="campo">
+            <label for="ciudadanos-votaron">Total de ciudadanos que votaron</label>
+            <input id="ciudadanos-votaron" type="number" min="0" step="1" inputmode="numeric">
+          </div>
+          <div class="campo">
+            <label for="cedulas-sufragio">Votantes según el acta de sufragio <small>Opcional (Ley 32243, art. 279).</small></label>
+            <input id="cedulas-sufragio" type="number" min="0" step="1" inputmode="numeric">
+          </div>
+        </div>
+        <div id="avisos-sumas"></div>
+      </section>
+
+      <section id="paso-lectura" class="ancho-completo">
+        <h2><span class="numero-paso">3</span>La IA revisa antes de sellar</h2>
+        <p class="nota">Claude mira la foto y la compara con lo que digitaste. Solo advierte: nunca cambia tus números ni impide sellar. Si no hay señal, sella igual y queda "lectura pendiente".</p>
+        <button id="pedir-lectura" type="button" class="secundario">Pedir lectura a Claude</button>
+        <div id="lectura-resultado"></div>
+        <div id="contraste"></div>
+      </section>
+
+      <section id="paso-sellar">
+        <h2><span class="numero-paso">4</span>Sellar el paquete</h2>
+        <p class="nota">Se sella un solo paquete: mesa, votos, huella de la foto del acta y del precinto, hora y personeros presentes. Lo firmas con tu sello.</p>
+        <label class="casilla"><input id="personeros-presentes" type="checkbox"> Hubo personeros en la mesa</label>
+        <div id="correccion"></div>
+        <div class="acciones">
+          <button id="sellar" type="button">Sellar con mi firma</button>
+        </div>
+        <div id="sello-resultado"></div>
+      </section>
+
+      <section id="paso-enviar">
+        <h2><span class="numero-paso">5</span>Enviar y recibir el recibo</h2>
+        <p class="nota">El servidor anota el acta en su cuaderno y te devuelve un recibo firmado. Guárdalo: es tu prueba de que llegó.</p>
+        <div class="acciones">
+          <button id="enviar" type="button" disabled>Enviar el acta sellada</button>
+        </div>
+        <div id="envio-resultado"></div>
+        <div id="pendientes"></div>
+      </section>
+
+      <section id="paso-tablero" class="ancho-completo">
+        <h2><span class="numero-paso">6</span>¿Mi acta está en el tablero?</h2>
+        <p class="nota">Tu celular comprueba solo que tu acta esté en el tablero de resultados, con su camino de huellas hasta la raíz.</p>
+        <button id="comprobar-tablero" type="button" class="secundario">Comprobar ahora</button>
+        <div id="tablero-resultado"></div>
+        <h3>Mis recibos</h3>
+        <div id="recibos"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>Los datos de esta pantalla son de prueba. La llave privada vive solo en este navegador (IndexedDB) y no se puede exportar.</footer>
+
+  <script type="module" src="mesa.js"></script>
+</body>
+</html>
