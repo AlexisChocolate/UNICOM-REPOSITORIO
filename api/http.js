@@ -39,7 +39,8 @@ export function encabezadosCors(peticion, origenesPermitidos) {
   return {
     "access-control-allow-origin": origen,
     "access-control-allow-methods": "GET, POST, OPTIONS",
-    "access-control-allow-headers": "content-type, authorization",
+    // POST /fotos manda la llave y la firma en encabezados propios: sin listarlos aquí, el navegador corta la subida.
+    "access-control-allow-headers": "content-type, authorization, x-unicom-llave, x-unicom-firma",
     "access-control-max-age": "86400",
     vary: "origin",
   };
