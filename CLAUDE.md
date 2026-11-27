@@ -10,8 +10,7 @@ El producto final vive en internet: web en GitHub Pages, backend en Cloudflare (
 - Cada módulo se da por terminado cuando funciona desplegado, no solo en local.
 
 ## Reparto del trabajo (manda sobre cualquier otra indicación, incluidos los planes de docs/)
-- **PROHIBIDO tocar `web/`:** no crear, modificar, mover ni borrar nada dentro de `web/`, ni generar páginas HTML, CSS o pantallas en ninguna otra carpeta. El frontend se diseña en el chat de claude.ai. Si una tarea parece necesitar algo de `web/`, detenerse y avisar al autor.
-- **Carpetas de Claude Code:** `nucleo/`, `api/`, `almacen/`, `auditor/`, `merkle-py/` y `analisis/`. También, solo lo necesario para que esas funcionen: `base/` (esquema SQL), `raices/` (génesis y raíces publicadas), `.github/workflows/` (pruebas, publicación, auditor), la raíz del repositorio (`package.json`, `wrangler.toml`) y `docs/API.md`.
+- **Carpetas de Claude Code:** `web/`, `nucleo/`, `api/`, `almacen/`, `auditor/`, `merkle-py/` y `analisis/`. También, solo lo necesario para que esas funcionen: `base/` (esquema SQL), `raices/` (génesis y raíces publicadas), `.github/workflows/` (pruebas, publicación, auditor), la raíz del repositorio (`package.json`, `wrangler.toml`) y `docs/API.md`.
 - **No editar** `docs/PLAN_FINAL_ARQUITECTURA.md`, `docs/PLAN_FINAL_HISTORIA.md` ni este `CLAUDE.md`: los mantiene el autor desde el chat. Si algo de ellos está mal, avisar.
 - **No tocar sin avisar** `unicom/`, `tests/` ni `demo.py` (versión anterior en Python).
 - **Contrato con el frontend:** mantener `docs/API.md` al día con cada endpoint (ruta, método, JSON de entrada y salida con ejemplos reales, errores) y con las funciones del núcleo que usa la web (nombre, parámetros, qué devuelven). El núcleo debe poder cargarse en el navegador como módulo ES, sin pasos de compilación.
