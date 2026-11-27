@@ -6,7 +6,7 @@ import urllib.request
 
 from carril_a import Mesa
 
-DIRECCION_API = "https://unicom-api.unicom-puno.workers.dev"
+DIRECCION_API = "https://unicom-api.myk-unicom.workers.dev"
 UMBRAL_MILESIMAS = 800
 
 

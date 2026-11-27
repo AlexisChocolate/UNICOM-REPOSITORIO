@@ -86,6 +86,9 @@ async function pintarCadena(raices) {
   if (API_ES_LA_PUBLICADA && !esperada) {
     piezas.push(mensaje("mal", "No se pudo leer la génesis del repositorio (raices/0000-genesis.json): la llave del servidor no quedó comparada con lo publicado."));
   }
+  if (!API_ES_LA_PUBLICADA) {
+    piezas.push(mensaje("aviso", "Estás usando un servidor local (plan B): sus raíces no se comparan con la carpeta raices/ del repositorio, que es del servidor en internet."));
+  }
   const lista = crear("ul", "lista-simple");
   for (const raiz of [...raices].reverse()) {
     const fila = crear("li");

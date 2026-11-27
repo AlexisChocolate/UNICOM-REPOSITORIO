@@ -2,9 +2,9 @@
 
 *Versión 0.2.0 · 22 de noviembre de 2026. Lo mantiene Claude Code; el frontend (`web/`) se escribe a partir de este documento. Los ejemplos son respuestas reales del Worker (en el simulador local o en internet).*
 
-**Dirección del API desplegado:** `https://unicom-api.unicom-puno.workers.dev` (funcionando desde el 22/11/2026; la prueba de punta a punta pasó contra esta dirección).
+**Dirección del API desplegado:** `https://unicom-api.myk-unicom.workers.dev` (cuenta nueva de Cloudflare desde el 27/11/2026, por ahora sin R2: no guarda fotos ni volcados). Las raíces del servidor anterior (`unicom-api.unicom-puno.workers.dev`) quedan archivadas en `raices-servidor-anterior/`.
 
-**Llave pública del servidor desplegado:** `c286960620490b46aa90cca001d41a626606d447ce59308c78f3086635ccd265` (está en la génesis, `GET /raices`, raíz n.º 0, y en `raices/0000-genesis.json` cuando corra la publicación).
+**Llave pública del servidor desplegado:** `abce6c8fbad15a5a860e906bd23cb6d8250b8ff79e25b9492f2ee651ade693ba` (está en la génesis, `GET /raices`, raíz n.º 0, y en `raices/0000-genesis.json` cuando corra la publicación).
 
 **Resumen de rutas**
 

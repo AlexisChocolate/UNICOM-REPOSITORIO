@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 import { join } from "node:path";
 import { canonico } from "../nucleo/index.js";
 
-export const DIRECCION_API = "https://unicom-api.unicom-puno.workers.dev";
+export const DIRECCION_API = "https://unicom-api.myk-unicom.workers.dev";
 
 export function nombreArchivoRaiz(raiz) {
   const numero = String(raiz.contenido.numero).padStart(4, "0");

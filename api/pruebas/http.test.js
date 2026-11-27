@@ -5,7 +5,7 @@ import { encabezadosCors } from "../http.js";
 const ORIGENES = "https://alexischocolate.github.io,http://localhost:8000";
 
 function peticionDesde(origen) {
-  return new Request("https://unicom-api.unicom-puno.workers.dev/fotos", { method: "OPTIONS", headers: { origin: origen } });
+  return new Request("https://unicom-api.myk-unicom.workers.dev/fotos", { method: "OPTIONS", headers: { origin: origen } });
 }
 
 test("CORS deja a la app de mesa mandar la llave y la firma de la foto en sus encabezados", () => {

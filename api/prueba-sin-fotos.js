@@ -2,7 +2,7 @@
 // padrón -> foto -> lector de IA -> acta firmada -> recibo -> respaldo -> prueba de inclusión -> raíz -> volcado.
 //
 //   $env:CLAVE_ADMIN = "..."          (PowerShell; la misma clave guardada como secreto del Worker)
-//   node api/prueba-de-punta-a-punta.js https://unicom-api.unicom-puno.workers.dev [mesa]
+//   node api/prueba-sin-fotos.js https://unicom-api.myk-unicom.workers.dev [mesa]
 import {
   contenidoPeticionLectura,
   firmarHuella,
