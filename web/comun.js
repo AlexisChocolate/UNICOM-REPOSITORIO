@@ -1,4 +1,4 @@
-export const API_PUBLICADA = "https://unicom-api.unicom-puno.workers.dev";
+export const API_PUBLICADA = "https://unicom-api.myk-unicom.workers.dev";
 export const API_LOCAL = "http://127.0.0.1:8787";
 
 const CLAVE_API_ELEGIDA = "unicom-api";
@@ -40,7 +40,8 @@ export const API = ELECCION_API.direccion;
 export const API_RECHAZADA = ELECCION_API.rechazada;
 
 // Las raíces de la carpeta raices/ del repositorio son las del servidor publicado; contra el plan B local no aplican.
-export const API_ES_LA_PUBLICADA = API === API_PUBLICADA;
+// Worker propio de Mayk: su génesis no está en raices/ del repositorio, así que se usa la del propio servidor, como en el plan B.
+export const API_ES_LA_PUBLICADA = false;
 
 export class ErrorDeApi extends Error {
   constructor(estado, codigo, mensaje, detalles) {
@@ -141,10 +142,10 @@ export async function cadenaConfiable(nucleo) {
       return { llave: null, raices, ultimaFirmada: null, confiable: false, origen: "génesis del repositorio", aviso: "ALERTA: el repositorio tiene génesis publicada, pero el servidor no muestra ninguna raíz." };
     }
   } else if (raices.length === 0) {
-    return { llave: null, raices, ultimaFirmada: null, confiable: false, origen: "servidor local", aviso: "El servidor local todavía no publicó su génesis: no hay llave de confianza." };
+    return { llave: null, raices, ultimaFirmada: null, confiable: false, origen: "servidor local", aviso: "El servidor todavía no publicó su génesis: no hay llave de confianza." };
   }
   const cadena = await nucleo.verificarCadenaRaices(raices, esperada);
-  const origen = esperada ? "génesis del repositorio" : "génesis del servidor local (plan B)";
+  const origen = esperada ? "génesis del repositorio" : "génesis del propio servidor";
   if (!cadena.valida) {
     return { llave: null, raices, ultimaFirmada: null, confiable: false, origen, aviso: `ALERTA: la cadena de raíces no es válida en la n.º ${cadena.numero}: ${cadena.motivo}` };
   }
@@ -335,7 +336,6 @@ export function agregarALista(clave, valor) {
 export function pintarEstadoConexion(contenedor, nucleoCargado) {
   contenedor.replaceChildren(
     nucleoCargado ? insignia("ok", "Verificación activa en este navegador") : insignia("mal", "No se pudo cargar el núcleo de verificación"),
-    insignia(API_ES_LA_PUBLICADA ? "" : "aviso", API_ES_LA_PUBLICADA ? "Servidor: en internet" : `Servidor local (plan B): ${API}`),
   );
   if (API_RECHAZADA) {
     contenedor.append(mensaje("mal", `Se ignoró el servidor del enlace (${API_RECHAZADA}): UNICOM solo habla con su servidor publicado o con uno en esta misma computadora. Si alguien te mandó ese enlace, avísalo.`));
